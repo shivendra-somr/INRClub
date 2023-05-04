@@ -46,6 +46,12 @@
         font-weight: 700;
        
     }
+    nav>div>button:hover{
+        cursor: pointer;
+        background-color: rgb(36, 34, 34);
+        border: 2px solid black;
+        transform: scale(1.03)
+    }
      a{
         color: black;
         text-decoration: none;
@@ -70,7 +76,7 @@
         border-radius: 10px;
         margin-top: 10px;
         font-size: 15px;
-        background: url(./img/search-icon.png) no-repeat 5px center;
+        /* background: url(./img/search-icon.png) no-repeat 5px center; */
         background-size: 16px 16px;
         padding-left: 30px;
         background-color: rgb(240, 236, 236);
