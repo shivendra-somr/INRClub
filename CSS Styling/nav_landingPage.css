@@ -4,9 +4,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
-        }
-        html{
             font-family: Inter, sans-serif;
         }
         header{
@@ -45,7 +42,12 @@
             font-size: medium;
             text-decoration: none;
             font-weight: 700;
-           
+        }
+        nav>div>button:hover{
+            cursor: pointer;
+            background-color: rgb(36, 34, 34);
+            border: 2px solid black;
+            transform: scale(1.03)
         }
          a{
             color: black;

@@ -46,6 +46,12 @@
         font-weight: 700;
        
     }
+    nav>div>button:hover{
+        cursor: pointer;
+        background-color: rgb(36, 34, 34);
+        border: 2px solid black;
+        transform: scale(1.03)
+    }
      a{
         color: black;
         text-decoration: none;
