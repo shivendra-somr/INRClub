@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    transition-duration: 1s;
+}
+
+/* header css */
+
+header {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 16px;
+    margin: auto;
+    /* background-color: red; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+
+nav {
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav>div>img {
+
+    height: 60px
+}
+
+nav>div>button {
+    height: 43px;
+    width: 135px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.about {
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 240px;
+}
+
+#search_div {
+    margin-left: 5%;
+}
+
+#search {
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    background: url(./img/search-icon.png) no-repeat 5px center;
+    background-size: 16px 16px;
+    padding-left: 30px;
+    background-color: rgb(240, 236, 236);
+    border: 1px solid rgb(236, 221, 221);
+
+}
+
+/* about section css */
+
+.heading {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.heading-1 {
+    width: 100%;
+    margin: auto;
+    margin: 0 auto 1.5rem;
+    max-width: 800px;
+    font-size: 4.5rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -.02rem;
+    color: #141e23;
+}
+
+.para-1 {
+    margin: 0 auto 3.5rem;
+    max-width: 600px;
+    letter-spacing: -.01rem;
+    color: #141e23;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.picture {
+    width: 80%;
+    margin: auto;
+}
+
+.picture img {
+    width: 500px;
+    display: block;
+    margin: auto;
+}
+
+/* perk section css */
+
+#container1 {
+    width: 80%;
+    display: flex;
+    margin: 40px auto;
+}
+
+#imgDiv {
+    width: 45%;
+}
+
+#imgDiv img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#description {
+    width: 50%;
+    padding: 2%;
+    margin: auto;
+}
+
+#description h1 {
+    font-size: 60px;
+}
+
+#description #services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#services #card {
+    width: 97%;
+    height: 250px;
+    padding: 20px;
+}
+
+#card button {
+    font-size: 12px;
+    min-width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 3%;
+}
+
+#Invisible {
+    opacity: 0;
+}
+
+#container2 {
+    width: 80%;
+    display: flex;
+    margin: 40px auto;
+}
+
+#imgDiv2 {
+    width: 58%;
+}
+
+#imgDiv2 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#description2 {
+    width: 38%;
+    padding-right: 40px;
+    margin: auto;
+}
+
+#description2 h1 {
+    font-size: 60px;
+}
+
+#container3 {
+    width: 80%;
+    display: flex;
+    margin: 40px auto;
+}
+
+#description3 {
+    width: 38%;
+    padding-left: 40px;
+    margin: auto;
+}
+
+#description3 h1 {
+    font-size: 60px;
+}
+
+#imgDiv3 {
+    width: 58%;
+}
+
+#imgDiv3 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Premium Section */
+
+
+.premium {
+    height: 600px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background-color: #242424;
+    color: #fff;
+    /* font-family: Arial, sans-serif; */
+    border-radius: 16px;
+}
+
+.premium>div {
+    width: 26%;
+    margin: auto;
+    
+}
+
+.premium>div h1 {
+    font-size: 3.0rem;
+    margin-bottom: 20px;
+}
+
+.pbtn {
+    width: 110px;
+    height: 42px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.premium>div p {
+    color: #8e9396;
+    margin-bottom: 20px;
+}
+
+.premium>div:nth-child(1) h1 {
+    /* margin-top: 40px; */
+    padding-top: 36px;
+}
+
+.premium>div:nth-child(1) p {
+    padding-top: 3px;
+}
+
+.firstjoinbtn {
+    margin-top: 67px;
+    width: 280px;
+    height: 50px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    border: none;
+}
+
+.joinbtn {
+    margin-top: 35px;
+    width: 280px;
+    height: 50px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    border: none;
+}
+
+/* FAQs Section */
+
+.faq {
+    width: 80%;
+    padding-top: 220px;
+    margin: auto;
+}
+
+.accordion {
+    background-color: white;
+    color: #242424;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    height: 67px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.33rem;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    letter-spacing: -.02rem;
+
+}
+
+.panel {
+    font-family: Arial, sans-serif;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    line-height: 1.5;
+
+}
+
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+    color: black;
+}
+
+
+/* Footer Section */
+
+.spacing {
+    height: 220px;
+}
+
+.footer {
+    width: 80%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.footer>div {
+    width: 30%;
+}
+
+.footer>div:nth-child(1) img {
+    height: 50px;
+}
+
+.footer>div:nth-child(1) i {
+    padding-left: 12px;
+    color: #242424;
+}
+
+.footer>div:nth-child(2) {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 2.3;
+    color: #242424;
+}
+
+.footerimg {
+    margin-bottom: 40px;
+}
+
+/* Bottom Section */
+
+.bottom {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding-left: 10px;
+}
+
+.bottom>div {
+    width: 40%;
+    text-align: left;
+    color: #8e9396;
+    padding-left: 8px;
+    font-size: .81rem;
+    letter-spacing: -.01rem;
+    line-height: 1.5;
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 400;
+}
