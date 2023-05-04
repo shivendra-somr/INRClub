@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Cart</title>
+    <style>
+        body {
+            background-color: #d1d8e0;
+        }
+
+        div {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            background-color: #d1d8e0;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 5px;
+            margin: 0 2% 0 -15%;
+        }
+
+        #main {
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        button {
+            margin: 5px 20px;
+            font-size: 15px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            background-color: white;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #main div {
+            padding: 0;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+
+        #main div:hover {
+            background-color: whitesmoke;
+        }
+
+        h3,
+        h4,
+        p {
+            margin: 10px;
+        }
+
+        #main div :nth-child(6) {
+            background-color: orangered;
+            color: white;
+            border: 0;
+        }
+
+        #main div :nth-child(7) {
+            font-weight: bold;
+            font-size: 20px;
+            background-color: wheat;
+            padding: 6px 15px;
+            color: black;
+            border: 0;
+        }
+
+        #main div :nth-child(8) {
+            background-color: grey;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 8px 15px;
+            color: white;
+            border: 0;
+        }
+
+        .money {
+            display: flex;
+            margin: 20px auto;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .money a {
+            display: flex;
+            border: 1px solid red;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: greenyellow;
+            color: black;
+            border-radius: 10px;
+            padding: 0 10px;
+            align-items: center;
+        }
+
+        .money a:active {
+            transform: scale(0.97);
+        }
+
+        @media only screen and (max-width: 740px) {
+            #main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #main {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="money">
+        <h2 id="total"></h2> <br>
+        <a href="MakePayment.html">Pay Now</a>
+    </div>
+
+    <div id="main"></div>
+</body>
+
+<script>
+    const main = document.getElementById("main");
+    const MenCart = JSON.parse(localStorage.getItem("MenCart")) || [];
+    const total = document.getElementById("total");
+    showData(MenCart);
+
+
+    function showData(data) {
+        main.innerHTML = "";
+        data.forEach((el, i) => {
+            const card = document.createElement("div");
+
+            const image = document.createElement("img");
+            const category = document.createElement("h3");
+            const description = document.createElement("p");
+            const price = document.createElement("h4");
+            const remove = document.createElement("button");
+            const increment = document.createElement("button");
+            const decrement = document.createElement("button");
+            const quantity = document.createElement("h4");
+
+            image.setAttribute("src", el.image);
+            description.innerText = el.description;
+            category.innerText = el.category;
+            price.innerText = "$" + el.price;
+            remove.innerText = "Remove"
+            increment.innerText = "+";
+            decrement.innerText = "-";
+            quantity.innerText = "Quantity: " + el.quantity;
+
+            remove.addEventListener("click", () => {
+                MenCart.splice(i, 1);
+                localStorage.setItem("MenCart", JSON.stringify(MenCart));
+                showData(MenCart);
+                sum();
+            });
+
+            increment.addEventListener("click", () => {
+                el.quantity++;
+                localStorage.setItem("MenCart", JSON.stringify(MenCart));
+                showData(MenCart);
+                sum();
+            });
+
+            decrement.addEventListener("click", () => {
+                if (el.quantity > 1) {
+                    el.quantity--;
+                }
+                localStorage.setItem("MenCart", JSON.stringify(MenCart));
+                showData(MenCart);
+                sum();
+            });
+            card.append(image, category, description, price, quantity, remove, decrement, increment);
+            main.append(card);
+        });
+    }
+
+    function sum() {
+        let sum = 0;
+        for (let i = 0; i < MenCart.length; ++i) {
+            sum += MenCart[i].quantity * MenCart[i].price;
+        }
+        total.innerText = "Total Price: $" + sum;
+    }
+    let flag = true;
+    if (flag) {
+        let sum = 0;
+        for (let i = 0; i < MenCart.length; ++i) {
+            sum += MenCart[i].quantity * MenCart[i].price;
+        }
+        total.innerText = "Total Price: $" + sum;
+        flag = false;
+    }
+</script>
+
+</html>
