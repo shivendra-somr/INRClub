@@ -70,7 +70,7 @@
         border-radius: 10px;
         margin-top: 10px;
         font-size: 15px;
-        background: url(./img/search-icon.png) no-repeat 5px center;
+        /* background: url(./img/search-icon.png) no-repeat 5px center; */
         background-size: 16px 16px;
         padding-left: 30px;
         background-color: rgb(240, 236, 236);

@@ -5,24 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS Styling/nav_landingPage.css">
     <style>
-
+        #container{
+            width: 90%;
+            height: 1000px;
+            margin: auto;
+            display: flex;
+            gap: 30px;
+            border: 1px solid black;
+        }
+        #filter_div{
+            width:35% ;
+            height: 1000px;
+            border: 2px solid rgb(204, 105, 18);
+        }
+        #product_div{
+            width: 60%;
+            height: 1000px;
+            border: 2px solid rgb(197, 12, 12);
+        }
+        .filter_head{
+            display: flex;
+            justify-content: space-between;
+        }
+        .filter_head>button{
+            background-color: white;
+            color: rgb(74, 172, 172);
+            border: none;
+            text-shadow: 0.5px 0.5px 0.5px;
+        }
+        #price_input{
+            width: 100%;
+            height: 38px;
+            display: flex;
+            border: 1px solid red;
+            gap: 10px;
+        }
+        #price_input input{
+            width: 48%;
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgb(234, 233, 233);
+            border: 1px solid rgb(236, 221, 221);
+        }
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;  
+        }
+        #property-type{
+            width: 100%;
+            height: 38px;
+            margin-top: 7px;
+            border-radius: 10px;
+            
+            background-color: rgb(234, 233, 233);
+            border: 1px solid rgb(236, 221, 221);
+        }
+        
     
 </style>
 </head>
 <body>
 <header>
+
     <nav>
         <div><img src="./img/Web Logo.jpeg" alt="image error" id="logo"></div>
-        <div id="search_div"><input type="search"  id="search" placeholder="Search by name or location"> </div>
+        <div id="search_div"> <span class="fa fa-search"></span>
+            <input type="search"  id="search" placeholder="Search by name or location"> 
+        </div>
+        
         <div class="about" id="main_perks" ><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a></div>
+        
         <div><button id="join">Login</button></div>
     </nav>
+
     <div class="about" id="perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a></div>
+
 </header>
 <main>
-    <h1>Hotel Booking Page</h1>
+
+    <h1>Hotel Booking Page</h1> 
+    <div id="container">
+        <div id="filter_div">
+            <div class="filter_head"><h3>Filters</h3> <button onclick="resetInputs()">Reset</button></div> <br>
+            <label for="price"><h5>Price</h5></label> <br>
+                <div id="price_input"> 
+                    <input type="number" id="price_from" class="reset-input" placeholder="From             "> 
+                    <input type="number"  id="price_to" class="reset-input" placeholder="To               ">   
+                </div> <br>
+            <label for="property_type"><h5>Property Type</h5></label>
+            <select id="property-type" name="property-type">
+                <option value="penthouse">Penthouse</option>
+                <option value="bungalow">Bungalow</option>
+                <option value="chalet">Chalet</option>
+                <option value="castle">Castle</option>
+                <option value="houseboat">Houseboat</option>
+                <option value="villa">Villa</option>
+            </select>
+
+        </div>
+
+
+        <!-- product div -->
+        <div id="product_div">
+            <div class="filter_head"><h3>16 Results</h3> 
+                <select name="" id="">
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div id="product_container">
+                <!-- append the product card here -->
+            </div>
+        </div>
+    </div>
+
 </main>
 <footer>
     <h1>footer</h1>
@@ -34,6 +134,19 @@
     logo.addEventListener("click",()=>{
         window.location.href="./index.html"
     })
+
+    // reset Input of filter
+    function resetInputs(){
+        let inputs= document.getElementsByClassName("reset-input")
+        for(let i=0; i<inputs.length; i++){
+            inputs.value="";
+        }
+    }
+
+
+            // filtering
+            let priceFrom= document.getElementById("price_from")
+            let priceTo= document.getElementById("price_to")
 </script>
 
 </html>
