@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./style/payment.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col">
+
+                    <!-- Billing Address -->
+                    <h3 class="title">billing address</h3>
+
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Name" id="name">
+                    </div>
+                    <div class="inputBox">
+                        <span>Email Address :</span>
+                        <input type="email" placeholder="example@example.com" id="email">
+                    </div>
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Address" id="address">
+                    </div>
+                    <div class="inputBox">
+                        <span>City :</span>
+                        <input type="text" placeholder="City" id="city">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>State :</span>
+                            <input type="text" placeholder="State" id="state">
+                        </div>
+                        <div class="inputBox">
+                            <span>ZIP :</span>
+                            <input type="text" placeholder="251306" id="pincode">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="col">
+                    <div class="col">
+
+                        <h3 class="title">Payment</h3>
+
+                        <div class="inputBox">
+                            <span>How would you like to pay?</span>
+                            <img src="C:\Users\nehas\OneDrive\Desktop\Practice\img\card.jpeg" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>Name On Card :</span>
+                            <input type="text" placeholder="Card Name" id="cardName">
+                        </div>
+                        <div class="inputBox">
+                            <span>Card Number :</span>
+                            <input type="number" placeholder="1111-2222-3333-4444" id="cardNumber">
+                        </div>
+                        <div class="inputBox">
+                            <span>Expiration Month :</span>
+                            <input type="text" placeholder="Month" id="expMonth">
+                        </div>
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Expiration Year :</span>
+                                <input type="number" placeholder="Year" id="expYear">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="123" id="cvv">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" onclick="setTimeout(openPopup, 3000)" value="Checkout" class="submit-btn">
+
+        </form>
+    </div>
+
+    <!-- Payment Successfull Popup -->
+    <div class="main">
+        <div class="main">
+            <div class="popup">
+                <img
+                    src="https://www.clipartkey.com/mpngs/m/153-1530386_success-png-image-png-download-transparent-background-green.png">
+                <h2>Payment Successful !</h2>
+                <p>Thanks For Visiting Here</p>
+                <button type="button" onclick="closePopup()"><a href="PaymentDetails.html">View Details</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Catching Form
+    const myForm = document.querySelector("form");
+
+    // Catching Billing Adddress
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const address = document.getElementById("address");
+    const city = document.getElementById("city");
+    const state = document.getElementById("state");
+    const pincode = document.getElementById("pincode");
+
+    // Catching Payment Details
+    const cardName = document.getElementById("cardName");
+    const cardNumber = document.getElementById("cardNumber");
+    const expMonth = document.getElementById("expMonth");
+    const expYear = document.getElementById("expYear");
+    const cvv = document.getElementById("cvv");
+
+    let DATA = JSON.parse(localStorage.getItem("payment")) || {};
+
+    myForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        DATA = {
+            // Billing Address
+            Name: name.value,
+            Email: email.value,
+            Address: address.value,
+            City: city.value,
+            State: state.value,
+            Pincode: pincode.value,
+            // Card Details
+            CardName: cardName.value,
+            CardNumber: "************1234",
+            ExpMonth: expMonth.value,
+            ExpYear: expYear.value,
+            CVV: "***"
+        };
+
+        localStorage.setItem("payment", JSON.stringify(DATA));
+    });
+
+    // Popup Card
+    let popup = document.querySelector(".popup");
+    function openPopup() {
+        popup.classList.add("open_popup");
+    }
+    function closePopup() {
+        popup.classList.remove("open_popup");
+    }
+</script>
+
+</html>

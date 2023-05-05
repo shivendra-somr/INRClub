@@ -7,6 +7,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+* p{
+    text-align: justify;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -24,13 +28,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
     font-size: 16px;
     margin: auto;
-    /* background-color: red; */
+    position: sticky;
+    top: 0;
+    background-color: white;
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
 }
 
