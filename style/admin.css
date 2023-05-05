@@ -1,0 +1,95 @@
+#container {
+    width: 90%;
+    height: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    border: 1px solid black;
+}
+/* #sidebar-one{
+    background-color: rgb(135, 120, 120);
+    box-shadow: rgba(16, 15, 15, 0.1) 0px 4px 12px;
+} */
+#update_div {
+    width: 30%;
+    /* height: 700px; */
+    border: 2px solid rgb(13, 159, 17);
+}
+
+#product_div {
+    width: 68%;
+    height: 1000px;
+    border: 2px solid rgb(197, 12, 12);
+}
+.u-full-width{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    background-color: rgb(234, 233, 233);
+    border: 1px solid rgb(236, 221, 221);
+    border-radius: 5px;
+}
+#update_div button{
+    font-weight: 700;
+    color: white;
+    background-color: rgb(9, 74, 118);
+    border-radius: 13px;
+}
+#update_div button:hover{
+    cursor: pointer;
+    background-color: rgb(131, 180, 226);
+    border: 2px solid black;
+    transform: scale(1.03);
+    font-weight: 1100;
+    color: black;
+}
+
+
+
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-left: 10px;
+  }
+  .card-img img {
+    min-width: 349px;
+    max-width: 350px;
+    min-height: 200px;
+    max-height: 200px;
+
+    /* border: 2px solid red; */
+  }
+  .card-link {
+    margin-right: 70px;
+    background-color: rgb(15, 56, 223);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: antiquewhite;
+  }
+  .card-button {
+    margin-right: 70px;
+    background-color: rgb(255, 69, 18);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: antiquewhite;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  #main_perks a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    margin-left: 25px;
+  }
+  #search {
+    width: 100px;
+  }

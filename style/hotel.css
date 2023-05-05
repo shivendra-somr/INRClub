@@ -25,7 +25,6 @@ nav {
     width: 80%;
     height: 60%;
     margin: auto;
-    /* background-color: white; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +39,7 @@ nav>div>button {
     height: 43px;
     width: 135px;
     border-radius: 25px;
-    background-color: black;
+    background-color: rgb(5, 5, 5);
     color: white;
     font-size: medium;
     text-decoration: none;

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <style>
+        :root{
+            --table-color: rgb(8, 110, 162)
+        }
+       
+        main h1 {
+            text-align: center;
+        }
+        table{
+            margin: auto;
+            width: 80%;
+            border: 2px solid red;
+        }
+        thead{
+            height: 40px;
+            border: 2px solid rgb(25, 70, 79);
+            background-color: var(--table-color) ;
+            color: white;
+        }
+        th{
+            border: 2px solid black;
+        }
+        tbody{
+            height: 35px;
+            text-align: center;
+        }
+        tbody td{
+            border: 1px solid green;
+        }
+        td button{
+            width: 70px;
+            height: 27px;
+            border-radius: 8px;
+            color:var(--table-color);
+            border: 3px solid var(--table-color);
+            font-weight: 700;
+        }
+        td button:hover{
+            background-color: var(--table-color);
+            color: white;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><img src="./img/Logo.jpeg" alt="image error" id="logo"></div>
+            <div id="search_div"><input type="search" id="search" placeholder="Search Customer by name"> </div>
+            <div class="about" id="main_perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a>
+            </div>
+            <div><button id="join">Admin Page</button></div>
+        </nav>
+    </header>
+    <main>
+         <p>admin 2 page for customer details</p><a href="admin.html" style="height: 40px;background-color: red;">admin page</a>
+        <h1>Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Id Proof</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Room Type</th>
+                    <th>No. of Guest</th>
+                    <th>Bill Amount</th>
+                    <th>Status</th>
+                    <th>Cancle Booking</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gaurav</td>
+                    <td>1234567890</td>
+                    <td>Pan Card/Aadhar/DL
+                        using <'select tag>
+                    </td>
+                    <td>05-05-2023</td>
+                    <td>06-05-2023</td>
+                    <td>Double Bed</td>
+                    <td>5</td>
+                    <td>10,000</td>
+                    <td>Confirmed</td>
+                    <td><button id="booking-cancle-button">Cancle</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
