@@ -19,6 +19,9 @@ header {
     font-size: 16px;
     /* background-color: red; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color:white;
+    position: fixed;
+    z-index: 3;
    
 }
 
@@ -108,6 +111,7 @@ a {
     transform: translateY(-50%);
 }
 
+
 @media only screen and (max-width: 1130px) {
     header {
         display: block;
@@ -141,26 +145,31 @@ a {
     gap: 30px;
     position: relative;
     /* border: 1px solid black; */
+    margin-top: 100px;
 }
 
 #filter_div {
-    width: 30%;
-    height: 700px;
+    width: 300px;
+    height: 720px;
+    background-color: white;
+   
+    margin-top: -30px;
     position: fixed;
+    /* border: 1px solid red; */
+    /* z-index: -5; */
     /* width: 400px; */
+    /* margin-top: 50px; */
 }
 
 #product_div {
     width: 68%;
     height: 1000px;
-    margin-left: 35%;
+    margin-left: 30%;
+    /* z-index: 2; */
     /* border: 2px solid rgb(197, 12, 12); */
 }
 
-.filter_head {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .filter_head>button {
     background-color: white;
@@ -344,9 +353,9 @@ input[type=number]::-webkit-inner-spin-button {
     margin: auto;
     grid-template-columns: repeat(2,1fr);
     grid-row-gap : 80px;
-    grid-column-gap : 30px;
+    grid-column-gap : 70px;
 
-    margin-left: 30px;
+    margin-left: 0px;
     line-height: 30px;
     margin-top: 30px;
    
@@ -356,7 +365,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .card{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 400px;
+    width: 440px;
     border-radius: 10px;
     text-align: center;
     
@@ -365,7 +374,7 @@ input[type=number]::-webkit-inner-spin-button {
 padding: 10px;
 }
 .hotelImg{
-    width: 400px;
+    width: 440px;
     height: 270px;
     border-radius: 10px 10px 0 0;
 }
@@ -388,4 +397,27 @@ padding: 10px;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    border: 2px solid black;
+}
+.book:hover{
+   
+    background-color:white;
+    color: black;
+  
+    border: 2px solid black;
+    
+}
+.detail:hover{
+    background-color:black;
+    color: white;
+    
+    border: 2px solid black;
+}
+.divprice{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.span1{
+    margin-top: 2px;
 }
