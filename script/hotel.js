@@ -6,7 +6,7 @@ logo.addEventListener("click", () => {
 
 // reset Input of filter
 
-
+let hoteldata=JSON.parse(localStorage.getItem("hotel"))||[]
 
 // filtering
 let priceFrom = document.getElementById("price_from")
@@ -117,6 +117,12 @@ function createcard(el) {
     let detail = document.createElement("button")
     detail.className = "detail"
     detail.textContent = "View Details"
+
+    detail.addEventListener("click", () => {
+        window.location.href = "./individual.html"
+        hoteldata.push({...el})
+        localStorage.setItem("hotel",JSON.stringify(hoteldata))
+    })
     let book = document.createElement("button")
     book.className = "book"
     book.textContent = "Book Now"
