@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="./style/index.css">
+        <link rel="stylesheet" href="./style/admin.css">
+        <script>
+            
+        </script>
+</head>
+<body>
+    <!-- header  -->
+    <header>
+      <nav>
+          <div><img src="./img/Logo.jpeg" alt="image error" id="logo"></div>
+          <div id="search_div"><input type="search" id="search" placeholder="Search by name or location"> </div>
+          <div class="about" id="main_perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a>
+          </div>
+          <div><button id="join">Join INR Club</button></div>
+      </nav>
+  </header>
+
+    <main>
+      <h1>
+        Admin Page
+        <button style="width: 70px"><a href="hotel.html">hotel</a></button>
+      </h1>
+      <div id="container">
+        <!-- update container -->
+        <div id="update_div">
+          <h2>Update</h2>
+          <br />
+
+          <div class="columns four sidebar-one" id="sidebar-one">
+            <!-- Add hotels -->
+            <div id="filterAdd">
+              <h4>Add Hotels</h4>
+              <input
+                type="text"
+                id="hotel-name"
+                class="u-full-width"
+                placeholder="Hotel Name"
+              />
+              <br />
+              <input
+                type="text"
+                id="hotel-image"
+                class="u-full-width"
+                placeholder="Hotel Image Url"
+              />
+              <br />
+              <input
+                type="text"
+                id="hotel-location"
+                class="u-full-width"
+                placeholder="Location"
+              />
+              <br />
+              <input
+                type="text"
+                id="hotel-desc"
+                class="u-full-width"
+                placeholder="Description"
+              />
+              <br />
+              <input
+                type="number"
+                id="hotel-price"
+                class="u-full-width"
+                placeholder="Price"
+              />
+              <br />
+              <button id="add-hotel" class="u-full-width button button-primary">
+                Add Hotel
+              </button>
+              <hr />
+              <br />
+            </div>
+
+            <!-- update hotels -->
+            <div id="Updatediv">
+              <h4>Update all fields of Hotel</h4>
+              <input
+                type="text"
+                id="update-hotel-id"
+                class="u-full-width"
+                placeholder="ID"
+              />
+              <br />
+              <input
+                type="text"
+                id="update-hotel-name"
+                class="u-full-width"
+                placeholder="Hotel Name"
+              />
+              <br />
+              <input
+                type="text"
+                id="update-hotel-image"
+                class="u-full-width"
+                placeholder="Hotel Image Url"
+              />
+              <br />
+              <input
+                type="text"
+                id="update-hotel-location"
+                class="u-full-width"
+                placeholder="Location"
+              />
+              <br />
+              <input
+                type="text"
+                id="update-hotel-desc"
+                class="u-full-width"
+                placeholder="Description"
+              />
+              <br />
+              <input
+                type="number"
+                id="update-hotel-price"
+                class="u-full-width"
+                placeholder="Price"
+              />
+              <br />
+              <button
+                id="update-hotel"
+                class="u-full-width button button-primary"
+              >
+                Update all fields
+              </button>
+              <hr />
+              <br />
+            </div>
+
+            <!-- update hotel price -->
+
+            <div id="Updateprice">
+              <h4>Update only Price</h4>
+              <input
+                type="text"
+                id="update-score-hotel-id"
+                class="u-full-width"
+                placeholder="ID"
+              />
+              <br />
+              <input
+                type="number"
+                id="update-score-hotel-price"
+                class="u-full-width"
+                placeholder="Price"
+              />
+              <br />
+              <button
+                id="update-score-hotel"
+                class="u-full-width button button-primary"
+              >
+                Update Hotel Price
+              </button>
+              <hr />
+              <br />
+            </div>
+
+            <!-- sort by price -->
+
+            <div id="Sortdiv">
+              <h4>Sort Based On Price</h4>
+              <button
+                id="sort-price-low-to-high"
+                class="u-full-width button button-primary"
+              >
+                Sort Low To High
+              </button>
+              <br />
+              <button
+                id="sort-price-high-to-low"
+                class="u-full-width button button-primary"
+              >
+                Sort High To Low
+              </button>
+              <hr />
+              <br />
+            </div>
+            <!-- sort by rating -->
+            <div id="SortRating">
+              <h4>Sort Based On Rating</h4>
+              <button
+                id="sort-rating-low-to-high"
+                class="u-full-width button button-primary"
+              >
+                Sort Low To High
+              </button>
+              <br />
+              <button
+                id="sort-rating-high-to-low"
+                class="u-full-width button button-primary"
+              >
+                Sort High To Low
+              </button>
+              <hr />
+            </div>
+          </div>
+        </div>
+        <!-- product div -->
+        <div id="product_div">
+          <div class="filter_head">
+            <h3 id="count">Results</h3>
+          </div>
+
+          <div id="product_container">
+            <!-- append the product card here -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+<script src="./script/admin.js"></script>
+</html>

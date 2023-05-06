@@ -1,0 +1,731 @@
+{   "admin":[
+        {
+            "id":1,
+            "username":"gaurav",
+            "email":"gauravraj2601@gmail.com",
+            "password":"gaurav123"
+        }
+    ],
+    "hotels": [
+        {
+            "name": "Andaz Delhi - a concept by Hyatt",
+            "image": "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/14000000/13240000/13235700/13235605/5be22f44_b.jpg",
+            "location": "New Delhi",
+            "price": 8360,
+            "review": "4.5/5 Wonderful",
+            "description": "5-Star Luxury Lifestyle Hotel in Aerocity, New Delhi",
+            "type" : "Villa",
+            "id": "1"
+        },
+        {
+            "name": "ITC Maurya,A Luxury Collection Hotel",
+            "image": "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/10000/3800/3793/7346ae5e_b.jpg",
+            "location": "Chanakyapur",
+            "price": 12360,
+            "review": "4.4/5 Wonderful",
+            "type": "villa",
+            "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+            "id": "2"
+        },
+        {
+            "name": "Eros Hotel New Delhi, Nehru Place",
+            "image": "https://images.trvl-media.com/hotels/1000000/70000/63600/63545/w2244h1752x0y56-cfe7840c.jpg",
+            "location": "Nehru Place",
+            "price":11600,
+            "description": "Eros Hotel New Delhi Nehru Place is known for consistently delivering the finest Indian Hospitality experience over last 25 years. It offers contemporary design and comfort paired with Old World hospitality charm.",
+            "review": "3.8/5 Wonderful",
+            "type": "Resort",
+            "id": "3"
+        },
+        {
+            "name": "Aloft New Delhi Aerocity",
+            "image": "https://images.trvl-media.com/hotels/25000000/24410000/24408500/24408483/51f43bae.jpg",
+            "location": "Aerocity",
+            "price": 10000,
+            "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+            "review": "4.3/5 Wonderful",
+            "type": "Resort",
+            "id": "4"
+        },
+        {
+            "name": "Pullman New Delhi Aerocity Hotel",
+            "image": "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/10000000/10000000/9994600/9994586/99a27f9a_b.jpg",
+            "location": "Aerocity",
+            "price": 9900,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review": "4.2/5 Wonderful",
+            "type": "Hot Tub",
+            "id": "5"
+        },
+        {
+            "name": "Piccadily Hotel Manali",
+            "image": "https://images.trvl-media.com/hotels/49000000/48950000/48946400/48946377/1eb7d78f.jpg",
+            "location": "Manali",
+            "price": 12400,
+            "description": "Piccadily Manali is part of The Piccadily Holiday Resorts Limited, a luxury hotel chain in India.",
+            "review": "4.6/5 Wonderful",
+            "type": "villa",
+            "id": "6"
+        },
+        {
+            "name": "JW Marriott Mumbai Sahar",
+            "image": "https://images.trvl-media.com/hotels/10000000/9790000/9784600/9784580/0114879f.jpg",
+            "location": "Mumbai",
+            "price": 15500,
+            "description": "Marriott International Inc (Marriott) is a hospitality service provider that operates hotels and restaurants. It operates, franchises, and licenses hotels, residential and timeshare properties under several luxury, premium, and select brand names.",
+            "review": "4.5/5 Wonderful",
+            "type": "Resort",
+            "id": "7"
+        },
+        {
+            "name": "Treebo Tryst Sattva",
+            "image": "https://images.trvl-media.com/hotels/84000000/83670000/83663400/83663364/6696e9cd.jpg",
+            "location": "New Manali",
+            "price": 2350,
+            "description": "The Treebo Tryst Sattva With Mountain View is located near popular tourist attractions such as Hidimba Devi Temple, Circuit House, and Himalayan Nyinmapa Tibetan Buddhist Monastery.",
+            "review": "4.0/5",
+            "type":"Spa",
+            "id": "8"
+        },
+        {
+            "name": "Mystique, a Luxury Collection Hotel, Santorini",
+            "image": "https://lh6.googleusercontent.com/proxy/S1ElJDaHM5cBzQtCIqP03TQnyGfeiZ_g90zzV9ciVf7FNyl6y0g1eWEmAmGIRe8RKVsmQdIT-uMnTlkypGjZhDcsHGyoGLC9N9iVj_Jga63pDc36GbgD_jeML5PU4DGA6U1OkQNPgEaw-oGNr5tgHX9zZ7V0NA=w253-h142-k-no",
+            "location": "Greece",
+            "price": 8800,
+            "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+            "review": "4.7/5",
+            "type": "Luxury",
+            "id": "9"
+        },
+        {
+            "name": "Mandarin Oriental, Lago di Como",
+            "image": "https://lh5.googleusercontent.com/p/AF1QipP26_WeD30BEcqQVW-HqPdIATrvUPOHzQR1jv3J=w253-h168-k-no",
+            "location": "Italy",
+            "price": 1249,
+            "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+            "review": "4.8/5",
+            "type": "Luxury",
+            "id": "10"
+        },
+        {
+            "name": "Aman Venice",
+            "image": "https://lh5.googleusercontent.com/p/AF1QipNC0HPLE2fY9M9IYWYztggFxnrRV7D1fpXHEUzV=w253-h156-k-no",
+            "location": "Venice",
+            "price": 1899,
+            "description": "Beside the Grand Canal in a 16th-century palace, this elegant hotel is a 2-minute walk from both a vaporetto stop and the Piazza San Marco.",
+            "review": "4.7/5",
+            "type": "Luxury",
+            "id": "11"
+        },
+        {
+            "name": "Four Seasons Hotel Prague",
+            "image": "https://lh6.googleusercontent.com/proxy/fjCcNWJPWkMwJsbxpQwtWUgS_qfnhxFKjIXo8vBcuGLMdcnJtT1Jg21t4vfkVuQB7XqKb5nKJdov3cusR5RN80Uz8TlNLJZKQ32CNe4Y9FKPJGAk5ScaRvn9dgGDofeMMN-v4xmnQbZO5BHLO0mOCHHB4APYOA=w253-h155-k-no",
+            "location": "Prague",
+            "price":1080,
+            "description": "In 3 Old Town buildings featuring Baroque and Renaissance styles, this refined, high-end hotel is less than a minute's walk from a metro station and 5 minutes on foot from the Charles Bridge.",
+            "review": "4.3/5",
+            "type": "Luxury",
+            "id": "12"
+        },
+        {
+            "name": "Villa Igiea, a Rocco Forte Hotel",
+            "image": "https://lh5.googleusercontent.com/p/AF1QipMJ_hPmQ97znh9eWF70iYFURUygAcDdtB1rwlXo=w253-h168-k-no",
+            "location": "Italy",
+            "price": 1099,
+            "description": "On the coast of Palermo and overlooking the Mediterranean Sea, this upscale hotel is 4 km from both the opulent Teatro Massimo and the Gothic Palazzo Abatellis.",
+            "review": "4.1/5",
+            "type": "Luxury",
+            "id": "13"
+        },
+        {
+            "name": "Splendido Mare, A Belmond Hotel, Portofino",
+            "image": "https://lh5.googleusercontent.com/p/AF1QipOOdPrsJkpFDcnSjY0pXbFvKqBjmQdJwr1bQhxz=w253-h142-k-no",
+            "location": "Italy",
+            "price": 1199,
+            "description": "Set among shops housed in colorful traditional buildings, this elegant seasonal hotel lies next to Portofino harbor. It's a 10-minute walk from the museum at the 16th-century Castello Brown, and 6 km from the train station.",
+            "review": "4.2/5",
+            "type": "Luxury",
+            "id": "14"
+        },
+        {
+            "name": "Andronis Luxury Suites",
+            "image": "https://lh3.googleusercontent.com/p/AF1QipNLItBZH6GO1oZL-iSxxUBwgpXTHhLIsD_DcbWI=w296-h202-n-k-rw-no-v1",
+            "location": "Greece",
+            "price": 799,
+            "description": "Overlooking the Aegean Sea and a volcanic crater, this luxe all-suite hotel is 11 km from both the Santorini cable car and the Archaeological Museum of Thera.",
+            "review": "4.5/5",
+            "type": "Luxury",
+            "id": "15"
+        },{
+            "img":"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/a7678da8.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The Taj Mahal Palace Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":23000,
+            "description": "Set among shops housed in colorful traditional buildings, this elegant seasonal hotel lies next to Portofino harbor. It's a 10-minute walk from the museum at the 16th-century Castello Brown, and 6 km from the train station.",
+            "review":"4.7/5 Exceptional (212 reviews)",
+            "type":"Resort",
+            "id": 16
+ 
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/800000/796600/796521/7d52c46a.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Apple Country Resorts - A Vegetarian Place",
+            "location":"Old Manali",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":2100,
+            "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+            "review":"4.2/5 Very good (17 reviews)",
+            "type":"Resort" ,
+            "id": 17
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/84000000/83670000/83663400/83663364/6696e9cd.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Treebo Tryst Sattva",
+            "location":"New Manali",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":2350,
+            "description": "Beside the Grand Canal in a 16th-century palace, this elegant hotel is a 2-minute walk from both a vaporetto stop and the Piazza San Marco.",
+            "review":"",
+            "type":"Villa" ,
+            "id": 18
+  
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/6000000/5510000/5506800/5506761/89c3062f.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Span Resort and Spa",
+            "location":"Manali",
+            "refund":"Fully refundable",
+            "price":12499,
+            "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+            "review":"",
+            "type":"Spa" ,
+            "id": 19
+  
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/84000000/83470000/83464900/83464854/c5f1483e.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Prini inn",
+            "location":"Aleo",
+            "refund":"Fully refundable",
+            "price":800,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"",
+            "type":"Resort" ,
+            "id": 20
+  
+         },
+         
+         {
+            "img":"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/3000000/2810000/2803200/2803161/d18008e9_b.jpg",
+            "name":"Four Points by Sheraton Navi Mumbai, Vashi",
+            "location":"Vashi",
+            "refund":"",
+            "price":6599,
+            "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+            "review":"4.2/5Very Good (161 reviews)",
+            "type":"Villa" ,
+            "id": 21
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/a7678da8.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The Taj Mahal Palace Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":23000,
+            "description": "Set among shops housed in colorful traditional buildings, this elegant seasonal hotel lies next to Portofino harbor. It's a 10-minute walk from the museum at the 16th-century Castello Brown, and 6 km from the train station.",
+            "review":"4.7/5 Exceptional (212 reviews)",
+            "type":"Resort",
+            "id": 22
+ 
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/20000/17800/17773/95c36a58.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The Leela Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":16200,
+            "description": "In 3 Old Town buildings featuring Baroque and Renaissance styles, this refined, high-end hotel is less than a minute's walk from a metro station and 5 minutes on foot from the Charles Bridge.",
+            "review":"4.5/5 Wonderful (997 reviews)",
+            "type":"Resort" ,
+            "id": 23
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/10000000/9790000/9784600/9784580/0114879f.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"JW Marriott Mumbai Sahar",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":15500,
+            "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+            "review":"4.5/5 Wonderful (507 reviews)",
+            "type":"Resort" ,
+            "id": 24
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/2000000/1050000/1041900/1041839/0284df24.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Hotel Britannia",
+            "location":"pre",
+            "refund":"",
+            "price":" 9,116",
+            "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+            "review":"3.7/5 Good (690 reviews)",
+            "type":"Royal" ,
+            "id": 25
+ 
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/610000/603200/603151/3a97725a.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"NH Collection Genova Marina",
+            "location":"Genoa",
+            "refund":"",
+            "price":" 17,014",
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"4.4/5 Good (989 reviews)",
+            "type":"Royal",
+            "id": 26
+ 
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/20000/19400/19357/148f052c.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Hotel Europa",
+            "location":"Pre",
+            "refund":"",
+            "price":" 17,014",
+            "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+            "review":"3.6/5 Good (275 reviews)",
+            "type":"Royal",
+            "id": 27
+ 
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/18000000/17410000/17408400/17408307/e98dddf9.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Hotel Palazzo Grillo",
+            "location":"Genoa Historical Centre",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":" 25,087",
+            "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+            "review":"4.7/5 Exceptional (201 reviews)",
+            "type":"Royal",
+            "id": 28
+ 
+         }
+    ],
+    "mumbai":[
+        {
+            "image": "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/10000/3800/3793/7346ae5e_b.jpg",
+            "name": "ITC Maurya,A Luxury Collection Hotel",
+            "location": "Chanakyapur",
+            "price": 12999,
+            "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+            "review": "4.4/5 Wonderful",
+            "type": "Villa",
+            "id": 1
+        },
+        {
+            "img":"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/6000000/5310000/5301700/5301691/42bd346d_b.jpg",
+            "name":"The St. Regis Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":13000,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"4.6/5 Wonderful (460 reviews)",
+            "type":"Villa" ,
+            "id": 2
+
+         },
+         {
+            "img":"https://lh5.googleusercontent.com/p/AF1QipOOdPrsJkpFDcnSjY0pXbFvKqBjmQdJwr1bQhxz=w253-h142-k-no",
+            "name":"LSQ RJ Farms",
+            "location":"Vashi",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":10499,
+            "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+            "review":"4.4/5 Wonderful",
+            "type":"Villa" ,
+            "id": 3
+
+         },
+         
+         {
+            "img":"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/3000000/2810000/2803200/2803161/d18008e9_b.jpg",
+            "name":"Four Points by Sheraton Navi Mumbai, Vashi",
+            "location":"Vashi",
+            "refund":"",
+            "price":6599,
+            "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+            "review":"4.2/5Very Good (161 reviews)",
+            "type":"Villa" ,
+            "id": 4
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/a7678da8.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The Taj Mahal Palace Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":23000,
+            "description": "Set among shops housed in colorful traditional buildings, this elegant seasonal hotel lies next to Portofino harbor. It's a 10-minute walk from the museum at the 16th-century Castello Brown, and 6 km from the train station.",
+            "review":"4.7/5 Exceptional (212 reviews)",
+            "type":"Resort",
+            "id": 5
+ 
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/20000/17800/17773/95c36a58.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The Leela Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":16200,
+            "description": "In 3 Old Town buildings featuring Baroque and Renaissance styles, this refined, high-end hotel is less than a minute's walk from a metro station and 5 minutes on foot from the Charles Bridge.",
+            "review":"4.5/5 Wonderful (997 reviews)",
+            "type":"Resort" ,
+            "id": 6
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/10000000/9790000/9784600/9784580/0114879f.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"JW Marriott Mumbai Sahar",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":15500,
+            "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+            "review":"4.5/5 Wonderful (507 reviews)",
+            "type":"Resort" ,
+            "id": 7
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/6000000/5310000/5301700/5301691/796fe3c1.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The St. Regis Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":13000,
+            "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+            "review":"4.6/5 Wonderful (463 reviews)",
+            "type":"Spa" ,
+            "id": 8
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/10000/3200/3145/6fc0a932.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Trident, Nariman Point Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":10250,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"4.6/5 Wonderful (999 reviews)",
+            "type":"Spa" ,
+            "id": 9
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/2000000/1830000/1823800/1823707/2e002832.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Trident Bandra Kurla Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":10250,
+            "description": "Set among shops housed in colorful traditional buildings, this elegant seasonal hotel lies next to Portofino harbor. It's a 10-minute walk from the museum at the 16th-century Castello Brown, and 6 km from the train station.",
+            "review":"4.5/5 Wonderful (718 reviews)",
+            "type":"Spa" ,
+            "id": 10
+
+         },
+         {
+            "img":"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/6000000/5310000/5301700/5301691/42bd346d_b.jpg",
+            "name":"The LaLiT Mumbai",
+            "location":"Mumbai",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":9150,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"4.1/5 Very good (858 reviews)",
+            "type":"Spa" ,
+            "id": 11
+
+         }
+    ],
+    "manali":[
+        {
+            "img":"https://images.trvl-media.com/hotels/49000000/48950000/48946400/48946377/1eb7d78f.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Piccadily Hotel Manali",
+            "location":"Manali",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":14500,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"4.6/5 Wonderful (20 reviews)",
+            "type":"Villa" ,
+            "id": 1
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/1000000/800000/796600/796521/7d52c46a.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Apple Country Resorts - A Vegetarian Place",
+            "location":"Old Manali",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":2100,
+            "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+            "review":"4.2/5 Very good (17 reviews)",
+            "type":"Resort" ,
+            "id": 2
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/3000000/2800000/2794400/2794324/f98782d3.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Manuallaya The Resort Spa in the Himalayas",
+            "location":"Vashist",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":8100,
+            "description": "Beside the Grand Canal in a 16th-century palace, this elegant hotel is a 2-minute walk from both a vaporetto stop and the Piazza San Marco.",
+            "review":"3.2/5 Average (13 reviews)",
+            "type":"Villa" ,
+            "id": 3
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/20000000/19300000/19299300/19299275/4db1de16.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Snow Flakes Resort",
+            "location":"Gadherni",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":5000,
+            "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+            "review":"",
+            "type":"Resort" ,
+            "id": 4
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/28000000/27520000/27512100/27512046/14cc7f3b.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"The Orchard Greens Resort and Spa",
+            "location":"Old Manali",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":5900,
+            "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+            "review":"3.8/5 Good (17 reviews)",
+            "type":"Villa" ,
+            "id": 5
+
+         },
+         {
+            "img":"https://images.trvl-media.com/hotels/78000000/77110000/77101800/77101729/fa727ca6.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            "name":"Anand Vardhan Resorts",
+            "location":"Manali",
+            "refund":"Fully refundable Reserve now,pay later",
+            "price":5400,
+            "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+            "review":"4.3/5 Excellent (4 reviews)",
+            "type":"Resort" ,
+            "id": 6
+
+         },
+         {
+          "img":"https://images.trvl-media.com/hotels/69000000/68100000/68097900/68097898/15c86670.jpg?impolicy=resizecrop&rw=455&ra=fit",
+          "name":"Hotel Smuggle",
+          "location":"Nasogi",
+          "refund":"Fully refundable Reserve now,pay later",
+          "price":2399,
+          "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+          "review":"5/5 Excellent (2 reviews)",
+          "type":"Spa" ,
+          "id": 7
+
+       },
+       {
+          "img":"https://images.trvl-media.com/hotels/84000000/83670000/83663400/83663364/6696e9cd.jpg?impolicy=resizecrop&rw=455&ra=fit",
+          "name":"Treebo Tryst Sattva",
+          "location":"New Manali",
+          "refund":"Fully refundable Reserve now,pay later",
+          "price":2350,
+          "description": "Beside the Grand Canal in a 16th-century palace, this elegant hotel is a 2-minute walk from both a vaporetto stop and the Piazza San Marco.",
+          "review":"",
+          "type":"Villa" ,
+          "id": 8
+
+       },
+       {
+          "img":"https://images.trvl-media.com/hotels/6000000/5510000/5506800/5506761/89c3062f.jpg?impolicy=resizecrop&rw=455&ra=fit",
+          "name":"Span Resort and Spa",
+          "location":"Manali",
+          "refund":"Fully refundable",
+          "price":12499,
+          "description": "Set on a cliff overlooking the Santorini caldera in the Aegean Sea, this luxe hotel featuring traditional Cycladic architecture is a 14-minute walk from the village of Oia and 16 km from Santorini Airport.",
+          "review":"",
+          "type":"Spa" ,
+          "id": 9
+
+       },
+       {
+          "img":"https://images.trvl-media.com/hotels/84000000/83470000/83464900/83464854/c5f1483e.jpg?impolicy=resizecrop&rw=455&ra=fit",
+          "name":"Prini inn",
+          "location":"Aleo",
+          "refund":"Fully refundable",
+          "price":800,
+          "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+          "review":"",
+          "type":"Resort" ,
+          "id": 10
+
+       }
+    ],
+    "goa":[
+        {
+           "img":"https://images.trvl-media.com/hotels/1000000/30000/21000/20923/e8fa1812.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Tower Genova Airport Hotel & Conference Center",
+           "location":"Sestri Ponente",
+           "refund":"Fully refundable",
+           "price":6700,
+           "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+           "review":"3.7/5 Good (649 reviews)",
+           "type":"Villa" ,
+           "id": 1
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/6000000/5360000/5352500/5352453/8ce0af7e.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Best Western Premier CHC Airport",
+           "location":"Sestri Ponente",
+           "refund":"",
+           "price":8900,
+           "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+           "review":"4.3/5 Excellent (649 reviews)",
+           "type":"Spa" ,
+           "id": 2
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/3000000/2790000/2784300/2784201/7f97a547.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Holiday Inn Genoa City, an IHG Hotel",
+           "location":"Sestri Ponente",
+           "refund":"",
+           "price":9200,
+           "description": "A Tribute To The Golden Age Of The Mauryan Dynasty",
+           "review":"4.1/5 Very Good (678 reviews)",
+           "type":"Villa",
+           "id": 3
+ 
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/1000000/850000/848400/848348/d0d07df0.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Grand Hotel Savoia",
+           "location":"Pre",
+           "refund":"Fully refundable",
+           "price":12500,
+           "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+           "review":"4.5/5 Wonderful (978 reviews)",
+           "type":"Spa" ,
+           "id": 4
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/1000000/10000/2600/2575/fe57348b.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Bristol Palace Hotel",
+           "location":"San vicenzo",
+           "refund":"Fully refundable Reserve now,pay later",
+           "price":16500,
+           "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+           "review":"4.5/5 Wonderful (1006 reviews)",
+           "type":"Spa" ,
+           "id": 5
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/2000000/1610000/1600300/1600286/703e0437.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Melia Genova",
+           "location":"Carignano",
+           "refund":"",
+           "price":12000,
+           "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+           "review":"4.6/5 Wonderful (690 reviews)",
+           "type":"Spa",
+           "id": 6
+ 
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/2000000/1050000/1041900/1041839/0284df24.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Hotel Britannia",
+           "location":"pre",
+           "refund":"",
+           "price":9100,
+           "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+           "review":"3.7/5 Good (690 reviews)",
+           "type":"Royal" ,
+           "id": 7
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/1000000/610000/603200/603151/3a97725a.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"NH Collection Genova Marina",
+           "location":"Genoa",
+           "refund":"",
+           "price":17000,
+           "description": "The property features a Pullman Spa & Salon and an outdoor swimming pool, temperate controlled during winters.",
+           "review":"4.4/5 Good (989 reviews)",
+           "type":"Royal",
+           "id": 8
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/1000000/20000/19400/19357/148f052c.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Hotel Europa",
+           "location":"Pre",
+           "refund":"",
+           "price":1500,
+           "description": "In a chic 18-century complex overlooking Lake Como, this seasonal high-end hotel is 6 km from Como Cathedral. Posh, plush rooms offer free Wi-Fi, flat-screen TVs and minibars.",
+           "review":"3.6/5 Good (275 reviews)",
+           "type":"Royal",
+           "id": 9
+
+        },
+        {
+           "img":"https://images.trvl-media.com/hotels/18000000/17410000/17408400/17408307/e98dddf9.jpg?impolicy=resizecrop&rw=455&ra=fit",
+           "name":"Hotel Palazzo Grillo",
+           "location":"Genoa Historical Centre",
+           "refund":"Fully refundable Reserve now,pay later",
+           "price":25000,
+           "description": "Relax in style at our hotel in Delhi near the airport offering modern luxury design, 24-hour dining, a spa, gym, pool and functional venues.",
+           "review":"4.7/5 Exceptional (201 reviews)",
+           "type":"Royal",
+           "id": 10
+        }
+     ],
+     "booking":[
+        {
+            "id": 1,
+            "name":"Gaurav Raj",
+            "contact": 1234567890,
+            "Proof":"Pan Card",
+            "CheckIn":"04-05-2023",
+            "CheckOut":"06-05-2023",
+            "room":"Double Bed",
+            "guest":5,
+            "bill":8000,
+            "status": "Booked"
+        },
+        {
+            "id": 2,
+            "name":"Badri Kumar",
+            "contact": 1234567890,
+            "Proof":"Aadhar",
+            "CheckIn":"05-05-2023",
+            "CheckOut":"09-05-2023",
+            "room":"Single Bed",
+            "guest":2,
+            "bill":9000,
+            "status": "Pending"
+        },
+        {
+            "id": 3,
+            "name":"Gaurav Raj",
+            "contact": 9804567890,
+            "Proof":"Driving License",
+            "CheckIn":"04-05-2023",
+            "CheckOut":"06-05-2023",
+            "room":"King Size Bed",
+            "guest":2,
+            "bill":4000,
+            "status": "Booked"
+        }
+    ]
+}

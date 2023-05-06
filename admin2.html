@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* header nav{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        } */
+        :root{
+            --table-color: rgb(8, 110, 162)
+        }
+       
+        main h1 {
+            text-align: center;
+        }
+        table{
+            margin: auto;
+            width: 80%;
+        }
+        thead{
+            height: 40px;
+            background-color: var(--table-color) ;
+            color: white;
+        }
+        th{
+            border: 2px solid black;
+        }
+        tbody{
+            height: 35px;
+            text-align: center;
+        }
+        tbody td{
+            background-color: rgb(154, 154, 206);
+            font-weight: 550;
+        }
+        td button{
+            width: 70px;
+            height: 27px;
+            border-radius: 8px;
+            color:var(--table-color);
+            border: 3px solid var(--table-color);
+            font-weight: 700;
+        }
+        td button:hover{
+            background-color: var(--table-color);
+            color: white;
+            font-weight: 700;
+        }
+        #status{
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><img src="./img/Logo.jpeg" alt="image error" id="logo"></div>
+            <div id="search_div"><input type="search" id="search" placeholder="Search by Customer name"> </div>
+            <div class="about" id="main_perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a>
+            </div>
+            
+            <div><button id="join">Admin Page</button></div>
+        </nav>
+    </header>
+    <main>
+         <p>admin 2 page for customer details</p><a href="admin.html" style="height: 40px;background-color: red;">admin page</a>
+        <h1>Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Id Proof</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Room Type</th>
+                    <th>No. of Guest</th>
+                    <th>Bill Amount</th>
+                    <th>Status</th>
+                    <th>Cancle Booking</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <!-- append booking details here -->
+            </tbody>
+        </table>
+    </main>
+</body>
+        <script>
+                async function fetchData(){
+                    try {
+                        let res = await fetch("./api.json")
+                            res= await res.json();
+                            data= res
+                            console.log(data.booking);
+                            BookingData=data.booking
+                            DisplayData(data.booking)
+                            let book= document.getElementById("bookingStatus")                       
+                          
+                    } catch (error) {
+                        console.log(error)
+                    }
+                }
+                fetchData()
+                let tbody = document.querySelector("tbody")
+                function DisplayData(arr){
+                    tbody.innerHTML=null;
+                    arr.map((el,index)=>{
+                        let tr= document.createElement("tr");
+                        let td1= document.createElement("td");
+                        let td2= document.createElement("td");
+                        let td3= document.createElement("td");
+                        let td4= document.createElement("td");
+                        let td5= document.createElement("td");
+                        let td6= document.createElement("td");
+                        let td7= document.createElement("td");
+                        let td8= document.createElement("td");
+                        let td9= document.createElement("td");
+                        let td10= document.createElement("td");
+
+                        td9.id="bookingStatus"
+
+                        td1.innerText= el.name;
+                        td2.innerText= el.contact;
+                        td3.innerText= el.Proof;
+                        td4.innerText= el.CheckIn;
+                        td5.innerText= el.CheckOut;
+                        td6.innerText= el.room;
+                        td7.innerText= el.guest;
+                        td8.innerText= el.bill;
+                        td9.innerText= el.status;
+                        td9.id="status"
+
+                        let cancleBtn= document.createElement("button")
+                        cancleBtn.id="booking-cancle-button"
+                        cancleBtn.innerText="Cancle"
+                        td10.appendChild(cancleBtn) 
+
+                        cancleBtn.addEventListener("click",function(){
+                            deleteBooking(el.id)
+                            console.log("cancle")
+                        })
+                         
+                        tr.append(td1,td2,td3,td4,td5,td6,td7,td8,td9,td10)
+                        tbody.append(tr)
+                    })
+                }
+                        function deleteBooking(id){
+                            fetch(`https://mock-api-hotels.onrender.com/hotels/booking/${id}`,{
+                                method:"DELETE",
+                                headers:{
+                                "Content-type":"application/json"
+                                }
+                            })
+                            .then(res=> res.json())
+                            .then(data=> {
+                                fetchData();
+                                console.log(data)
+                            })
+                            .catch((err) => {
+                                console.log(err)
+                            })
+                        }
+                          
+
+        </script>
+</html>
