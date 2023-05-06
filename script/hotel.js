@@ -12,35 +12,67 @@ function resetInputs() {
 
 
 // filtering
-let priceFrom = document.getElementById("price_from").value
-let priceTo = document.getElementById("price_to").value
-let property_type = document.getElementById("property-type").value
+let priceFrom = document.getElementById("price_from")
+
+let priceTo = document.getElementById("price_to")
+let property_type = document.getElementById("property-type")
 let increase_guest = document.getElementById("increase-guest")
 let total_guest = document.getElementById("total-guest")
 let decrease_guest = document.getElementById("decrease-guest")
-let apply_button = document.getElementById("apply-button")
+
+
 
 let mainSection=document.getElementById("product_container")
-
-
+let noofcards=document.getElementById("noofcards")
+fetchdata();
 // console.log({ "price": priceFrom, "priceTo": priceTo, "property": property_type })
 async function fetchdata(){
-try{
-let res=await fetch("https://mock-api-hotels.onrender.com/hotels")
-let data=await res.json()
-console.log(data)
-display(data);
+    try{
+        let res=await fetch("https://mock-api-hotels.onrender.com/hotels")
+        let data=await res.json();
+        // arr=data;
+        console.log(data)
+        
+        display(data);
+        let search=document.getElementById("search")
+search.addEventListener("input",()=>{
+    searchdata(data);
+})
 
-}
-catch(err){
-    console.log(err);
-}
-}
-fetchdata();
+property_type.addEventListener("change",()=>{
+    propertytype(data);
+})
+let apply_button = document.getElementById("apply-button")
+apply_button.addEventListener("click",()=>{
+   
+    pricefilter(data);
+})
+        
+        }
+        catch(err){
+                console.log(err);
+            }
+            }
+   
+    // function fetchdata() {
+    //     fetch("https://mock-api-hotels.onrender.com/hotels")
+    //       .then(res => res.json())
+    //       .then(data => {
+            
+    //         console.log("Data successfully fetched:", arr);
+    //         display(data);
+    //         console.log(data);
+           
+    //       })
+    //       .catch(error => {
+    //         console.error("Error fetching data:", error);
+    //       });
+    //   }
+
 
 function display(data){
 mainSection.innerHTML="";
-
+noofcards.textContent=`${data.length} Results`;
 let cardlist=document.createElement("div")
 cardlist.className="card-list";
 mainSection.append(cardlist)
@@ -58,12 +90,20 @@ function createcard(el){
     img.className="hotelImg";
     let carditem=document.createElement("div")
     carditem.className="card-item";
-    let h3=document.createElement("h3")
+    let h3=document.createElement("h2")
+    h3.style.marginBottom ="10px";
     h3.textContent=el.name;
     let location=document.createElement("p")
     location.textContent=el.location
+    
     let h1=document.createElement("h1")
-    h1.textContent=`$${el.price}`
+    h1.textContent=`₹${el.price}`
+    let span=document.createElement("span")
+    span.textContent=" /Night"
+    span.className="span1"
+    let divprice=document.createElement("div")
+    divprice.className="divprice"
+    divprice.append(h1,span)
     let detail=document.createElement("button")
     detail.className="detail"
     detail.textContent="View Details"
@@ -71,9 +111,73 @@ function createcard(el){
     book.className="book"
     book.textContent="Book Now"
     
-    carditem.append(h3,location,h1,detail,book)
+    carditem.append(h3,location,divprice,detail,book)
     card.append(img,carditem)
     return card;
 
 
 }
+// console.log(arr)
+
+// search functionaq
+function searchdata(data){
+     let filtered=data.filter(function(el){
+            if(el.name.toUpperCase().includes(search.value.toUpperCase())==true||el.location.toUpperCase().includes(search.value.toUpperCase())==true){
+                return true;
+            }
+            else{
+                return false
+            }
+                })  
+   
+    
+
+    display(filtered);
+}
+
+function pricefilter(data){
+    console.log(data)
+    let filt=data.filter((el)=>{
+        // if(priceFrom.value==""){
+        //     return true
+        // }
+ if(+(el.price)>priceFrom.value&&+(el.price)<priceTo.value){
+    return true;
+}
+else{
+    return false
+}
+    });
+    display(filt);
+    
+}
+function propertytype(data){
+    // console.log(data)
+    let filt=data.filter((el)=>{
+if(el.type==property_type.value){
+    return true;
+}
+else{
+    return false
+}
+    });
+    display(filt);
+    
+}
+let count=1;
+increase_guest.addEventListener("click",function(){
+   count++;
+    total_guest.textContent=count;
+   
+})
+
+decrease_guest.addEventListener("click",function(){
+   if(count>1){
+count--;
+       total_guest.textContent=count;
+   }
+   
+})
+
+
+
