@@ -40,9 +40,11 @@ loginFormBtn.addEventListener('click', (e)=>{
   e.preventDefault();
   // console.log(adminData,loginUsername.value,loginPassword.value);
   if (loginUsername.value === adminData.username && loginPassword.value === adminData.password){
-    window.location.href = "./hotelfiltered.html";
+    window.location.href = "./hotelAdmin.html";
+    
   }
   else{
     window.location.href = "./hotel.html";
   }
 })
+
