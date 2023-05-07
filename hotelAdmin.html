@@ -6,7 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Appending the data</title>
+  <link rel="stylesheet" href="./style/index.css">
   <style>
+
+
+    nav{
+      width: 80%;
+      /* background-color: red; */
+    }
+    header{
+      /* background-color: yellow; */
+      width: 100%;
+      position: relative;
+    }
     #container {
       width: 90%;
       height: 1200px;
@@ -21,15 +33,15 @@
     box-shadow: rgba(16, 15, 15, 0.1) 0px 4px 12px;
 } */
     #update_div {
-      width: 30%;
+      width: 20%;
       /* height: 700px; */
-      /* border: 2px solid rgb(13, 159, 17); */
+      border: 2px solid rgb(13, 159, 17);
     }
 
     #product_div {
       width: 68%;
       height: 1000px;
-      /* border: 2px solid rgb(197, 12, 12); */
+      border: 2px solid rgb(197, 12, 12);
     }
 
     .u-full-width {
@@ -63,13 +75,15 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       padding-left: 10px;
+      background-color: red;
     }
 
     .card-img img {
-      min-width: 349px;
+      width: 30%;
+      /* min-width: 349px;
       max-width: 350px;
       min-height: 200px;
-      max-height: 200px;
+      max-height: 200px; */
 
       /* border: 2px solid red; */
     }
@@ -93,22 +107,22 @@
       font-weight: 700;
       color: antiquewhite;
     }
-
-    nav {
-      display: flex;
-      justify-content: space-around;
+    
+    .card{
+      background-color: black;
     }
 
-    #main_perks a {
-      text-decoration: none;
-      font-size: 30px;
-      color: black;
-      margin-left: 25px;
-    }
 
-    #search {
-      width: 200px;
+
+    @media only screen and (max-width:1000px){
+      #main_perks{
+        display: none;
+      }
+      nav{
+        width: 90%;
+      }
     }
+ 
   </style>
 </head>
 
@@ -124,15 +138,11 @@
         <a href="#">About us</a> <a href="#">The Perks</a>
         <a href="#">FAQs</a>
       </div>
-      <div><button id="join">Join INR Club</button></div>
+      <div><button id="admin2">Admin Dashboard</button></div>
     </nav>
   </header>
 
   <main>
-    <h1>
-      Admin Page
-      <button style="width: 70px"><a href="hotel.html">hotel</a></button>
-    </h1>
     <div id="container">
       <!-- update container -->
       <div id="update_div">
@@ -239,6 +249,9 @@
   </main>
 </body>
 <script>
+
+
+
   // ADD Hotels
   let hotelTitleInput = document.getElementById("hotel-name");
   let hotelImageInput = document.getElementById("hotel-image");
@@ -544,6 +557,17 @@
       appendData(temp);
     }
   });
+
+    // redirecting to pages
+  let admin= document.querySelector("#admin2")
+      admin.addEventListener("click",()=>{
+            window.location.href="admin2.html"
+       })
+
+  let home= document.querySelector("#logo")
+      home.addEventListener("click",()=>{
+        window.location.href="index.html"
+    })
 </script>
 
 </html>
