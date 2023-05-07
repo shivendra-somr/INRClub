@@ -65,6 +65,11 @@ hotelname.textContent=hoteldata[hoteldata.length-1].name;
 let location1=document.getElementById("location1")
 location1.textContent=hoteldata[hoteldata.length-1].location;
 
+let book=document.getElementById("book")
+book.addEventListener("click", () => {
+    window.location.href = "payment.html"
+})
+
 
 
     

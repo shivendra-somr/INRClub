@@ -149,11 +149,11 @@ a {
 }
 
 #filter_div {
-    width: 300px;
-    height: 720px;
+    width: 22%;
+    height: 100%;
     background-color: white;
    
-    margin-top: -30px;
+    margin-top: -10px;
     position: fixed;
     /* border: 1px solid red; */
     /* z-index: -5; */
@@ -169,7 +169,11 @@ a {
     /* border: 2px solid rgb(197, 12, 12); */
 }
 
-
+.filter_head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .filter_head>button {
     background-color: white;
@@ -239,6 +243,7 @@ input[type=number]::-webkit-inner-spin-button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 .conveniences-type div:hover {
@@ -246,6 +251,8 @@ input[type=number]::-webkit-inner-spin-button {
     border: 1px solid black;
     transform: scale(1.05)
 }
+
+
 
 .conveniences-type div p {
     margin: auto;
@@ -255,6 +262,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 #left1 {
     width: 27%;
+}
+.conveniences-type i{
+    color:#989ea9;
 }
 
 #rigth1 {
@@ -364,19 +374,20 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .card{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 440px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    width: 100%;
     border-radius: 10px;
-    text-align: center;
-    
+    /* text-align: center; */
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 .card-item{
 padding: 10px;
 }
 .hotelImg{
-    width: 440px;
+    width: 100%;
     height: 270px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 }
 .detail{
     padding: 10px 18px ;
@@ -415,9 +426,118 @@ padding: 10px;
 }
 .divprice{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 10px;
 }
 .span1{
     margin-top: 2px;
 }
+
+
+#TV:focus{
+border: 2px solid black;
+}
+
+
+@media all and (min-width:768px) and (max-width:1079px){
+  
+    
+    .card-list{
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap : 80px;
+        grid-column-gap : 70px;
+    
+        margin-left: 70px;
+        line-height: 30px;
+        margin-top: 30px;
+        justify-content: center;
+        /* align-items: center; */
+        /* border:1px solid red;    */
+    }
+    .card{
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+        width: 100%;
+        border-radius: 10px;
+        /* text-align: center; */
+        margin: auto;
+        
+    }
+    .hotelImg{
+        width: 100%;
+        height: 290px;
+        border-radius: 10px;
+    }
+    #filter_div{
+        margin-left: 30px;
+    }
+    #noofcards{
+        width: 100%;
+        margin-left: 40px;
+        /* border:1px solid red */
+        
+    }
+}
+
+
+
+@media all and (min-width:360px) and (max-width:767px){
+  
+    
+    .card-list{
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap : 80px;
+        grid-column-gap : 70px;
+    
+        margin-left: 70px;
+        line-height: 30px;
+        margin-top: 30px;
+        justify-content: center;
+        /* align-items: center; */
+        /* border:1px solid red;    */
+    }
+    .card{
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+        width: 110%;
+        /* border-radius: 10px; */
+        /* text-align: center; */
+        margin: auto;
+        
+    }
+    .hotelImg{
+        width: 100%;
+        /* height: 290px; */
+        border-radius: 10px ;
+    }
+    #filter_div{
+        width: 80%;
+        /* display: none; */
+        margin: auto;
+        position: static;
+        /* padding: 0 20px; */
+        margin-bottom: -270px;
+
+
+    }
+    #container{
+        display: block;
+    }
+    #noofcards{
+        width: 80%;
+        margin-left: 20%;
+        /* text-align: left; */
+        /* border:1px solid red */
+        
+    }
+    #product_div{
+        margin-left: 0;
+    }
+   
+
+}
+

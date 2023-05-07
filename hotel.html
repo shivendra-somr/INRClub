@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel List</title>
+    <title>INR CLUB</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,7 +36,9 @@
         <div id="container">
             <!-- filtering container -->
             <div id="filter_div">
+
                 <div class="filter_head">
+                    
                     <h3>Filters</h3> <button id="resett">Reset</button>
                 </div> <br>
 
@@ -53,14 +55,12 @@
                 </label>
                 <select id="property-type" name="property-type">
                     <option value="">Property Type</option>
-                    <option value="penthouse">Penthouse</option>
+                    
                     <option value="Resort">Resort</option>
                     <option value="Luxury">Luxury</option>
                     <option value="Hot Tub">Hot Tub</option>
                     <option value="spa">spa</option>
-                    <option value="bungalow">Bungalow</option>
-                    <option value="chalet">Chalet</option>
-                    <option value="castle">Castle</option>
+                   
                     <option value="villa">Villa</option>
                 </select> <br> <br>
 
@@ -69,34 +69,36 @@
                 </label>
                 <div class="conveniences-type">
                     <div id="left1">
-                        <p><i class="fa-solid fa-tv" style="color: #989ea9;"></i>Tv</p>
+                        <p id="TV"><i class="fa-solid fa-tv" style="color: #989ea9;"></i>TV</p>
                     </div>
                     <div id="rigth1">
-                        <p><i class="fa-brands fa-accessible-icon" style="color: #989ea9;"></i>Disabled Access</p>
+                        <p id="swim"><i class="fa-solid fa-person-swimming"></i>Swimming Pool</p>
                     </div>
                 </div>
                 <div class="conveniences-type">
                     <div id="left2">
-                        <p><i class="fa-solid fa-tree" style="color: #989ea9;"></i>In the Woods</p>
+                        <p id="mountain"><i class="fa-solid fa-tree" style="color: #989ea9;"></i>Mountain View</p>
                     </div>
                     <div id="rigth2">
-                        <p><i class="fa-solid fa-hot-tub-person" style="color: #989ea9;"></i>Hot Tubs</p>
+                        <p><i class="fa-solid fa-hot-tub-person" style="color: #989ea9;"></i>Bath Tub</p>
                     </div>
                 </div>
                 <div class="conveniences-type">
                     <div id="left3">
-                        <p><i class="fa-solid fa-eye" style="color: #989ea9;"></i>Views</p>
+                        <p><i class="fa-solid fa-eye" style="color: #989ea9;"></i>City View</p>
                     </div>
                     <div id="rigth3">
-                        <p><i class="fa-solid fa-water" style="color: #989ea9;"></i>Lakes & Rivers</p>
+                        <p>
+                            <i class="fa-solid fa-fan"></i>
+                            Air conditioning</p>
                     </div>
                 </div>
                 <div class="conveniences-type">
                     <div id="left4">
-                        <p><i class="fa-solid fa-fire" style="color: #989ea9;"></i>Woodburner</p>
+                        <p><i class="fa-solid fa-people-roof"></i>Terrace</p>
                     </div>
                     <div id="rigth4">
-                        <p><i class="fa-solid fa-paw" style="color: #989ea9;"></i>Dog Friendly</p>
+                        <p><i class="fa-solid fa-paw" style="color: #989ea9;"></i>Pet Friendly</p>
                     </div>
                 </div>
                 <div class="conveniences-type">
@@ -129,6 +131,7 @@
                 </div>
 
                 <div id="product_container">
+                   
                     <!-- append the product card here -->
                 </div>
             </div>
@@ -139,6 +142,7 @@
         <!-- <h1>footer</h1> -->
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/a4254e5bf9.js" crossorigin="anonymous"></script>
 
 <script src="./script/hotel.js"></script>
 

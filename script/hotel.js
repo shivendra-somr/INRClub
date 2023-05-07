@@ -24,6 +24,27 @@ let noofcards = document.getElementById("noofcards")
 fetchdata();
 
 
+
+
+
+
+let TV=document.getElementById("TV")
+let swim=document.getElementById("swim")
+let mountain=document.getElementById("mountain")
+let left1=document.getElementById("left1")
+let left2=document.getElementById("left2")
+let left3=document.getElementById("left3")
+let left4=document.getElementById("left4")
+let left5=document.getElementById("left5")
+let rigth1=document.getElementById("rigth1")
+let rigth2=document.getElementById("rigth2")
+let rigth3=document.getElementById("rigth3")
+let rigth4=document.getElementById("rigth4")
+
+
+
+
+
 // fetchData function
 async function fetchdata() {
     try {
@@ -55,6 +76,45 @@ async function fetchdata() {
             resetInputs(data);
         })
 
+        TV.addEventListener("click",()=>{
+            tvfilter(data);
+            left1.style.border="1px solid black"
+           
+        })
+        swim.addEventListener("click",()=>{
+            swimdata(data);
+            rigth1.style.border="1px solid black"
+
+        })
+        mountain.addEventListener("click",()=>{
+            mountaindata(data);
+           left2.style.border="1px solid black"
+        })
+        rigth2.addEventListener("click",()=>{
+            rigth2data(data);
+            rigth2.style.border="1px solid black"
+        })
+        left3.addEventListener("click",()=>{
+            left3data(data);
+            left3.style.border="1px solid black"
+        })
+        left4.addEventListener("click",()=>{
+            left4data(data);
+            left4.style.border="1px solid black"
+        })
+        left5.addEventListener("click",()=>{
+            left5data(data);
+            left5.style.border="1px solid black"
+        })
+        rigth3.addEventListener("click",()=>{
+            rigth3data(data);
+            rigth3.style.border="1px solid black"
+        })
+        rigth4.addEventListener("click",()=>{
+            rigth4data(data);
+            rigth4.style.border="1px solid black"
+        })
+
 
 
     }
@@ -68,6 +128,8 @@ async function fetchdata() {
 // display function
 function display(data) {
     mainSection.innerHTML = "";
+
+  
 
     // function to increaseor decrease noofcards. of guests
     let count = 1;
@@ -100,11 +162,21 @@ function createcard(el) {
     img.className = "hotelImg";
     let carditem = document.createElement("div")
     carditem.className = "card-item";
-    let h3 = document.createElement("h2")
+    let h3 = document.createElement("h3")
     h3.style.marginBottom = "10px";
+    h3.style.fontSize="22px";
+    h3.style.fontWeight="700"
     h3.textContent = el.name;
     let location = document.createElement("p")
     location.textContent = el.location
+
+     let rating=document.createElement("p")
+
+    
+
+     rating.textContent=`★ ${el.review}`;
+    
+     
 
     let h1 = document.createElement("h1")
     h1.textContent = `₹${el.price}`
@@ -118,16 +190,24 @@ function createcard(el) {
     detail.className = "detail"
     detail.textContent = "View Details"
 
-    detail.addEventListener("click", () => {
+    // detail.addEventListener("click", () => {
+    //     window.location.href = "./individual.html"
+    //     hoteldata.push({...el})
+    //     localStorage.setItem("hotel",JSON.stringify(hoteldata))
+    // })
+    // let book = document.createElement("button")
+    // book.className = "book"
+    // book.textContent = "Book Now"
+    // book.addEventListener("click", () => {
+    //     window.location.href = "./payment.html"
+    // })
+
+    card.addEventListener("click", () => {
         window.location.href = "./individual.html"
         hoteldata.push({...el})
         localStorage.setItem("hotel",JSON.stringify(hoteldata))
     })
-    let book = document.createElement("button")
-    book.className = "book"
-    book.textContent = "Book Now"
-
-    carditem.append(h3, location, divprice, detail, book)
+    carditem.append(h3, location, rating,divprice)
     card.append(img, carditem)
     return card;
 
@@ -159,7 +239,7 @@ function pricefilter(data) {
     }
     else{
         let filt = data.filter((el) => {
-            if (+(el.price) > priceFrom.value && +(el.price) < priceTo.value) {
+            if ((el.price) > +(priceFrom.value) && (el.price) < +(priceTo.value)) {
                 return true;
             }
             else {
@@ -194,5 +274,117 @@ function resetInputs(data) {
     property_type.value = ""
     total_guest.textContent = 1;
     display(data);
+    
+        left1.style.border="none"
+        rigth1.style.border="none"
+        left2.style.border="none"
+        rigth2.style.border="none"
+        rigth3.style.border="none"
+        rigth4.style.border="none"
+        left3.style.border="none"
+        left4.style.border="none"
+        left5.style.border="none"
+
+   
 
 }
+
+
+function tvfilter(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("TV")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+
+function swimdata(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Swimming Pool")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+
+function mountaindata(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Mountain View")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+
+
+function rigth2data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Bath Tub")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+
+function rigth3data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Air conditioning")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+function rigth4data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Pet Friendly")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+
+
+function left3data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("City View")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+function left4data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Terrace")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+function left5data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Wi-Fi")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
+
