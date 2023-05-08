@@ -90,20 +90,6 @@ a {
     transform: translateY(-50%);
 }
 
-@media only screen and (max-width: 1130px) {
-    header {
-        display: block;
-        padding-top: 25px;
-
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-    }
-
-    #search_div {
-        margin-left: 0%;
-    }
-}
-
 #container {
     width: 80%;
     margin: auto;
@@ -400,9 +386,25 @@ input[type=number]::-webkit-inner-spin-button {
         flex-direction: column;
     }
 
+    .card-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     #filter_div {
         width: 100%;
         display: none;
     }
 
+}
+
+@media only screen and (max-width: 1080px) {
+    header {
+        display: block;
+        padding-top: 25px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    #search_div {
+        margin-left: 0%;
+    }
 }
