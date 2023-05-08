@@ -1,3 +1,588 @@
+
+/* nav bar css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 16px;
+    /* background-color: red; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color:white;
+    position: fixed;
+    z-index: 3;
+   
+}
+
+nav {
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 3px; */
+   
+}
+
+nav>div>img {
+
+    height: 60px
+}
+
+nav>div>button {
+    height: 43px;
+    width: 135px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav>div>button:hover {
+    cursor: pointer;
+    background-color: rgb(36, 34, 34);
+    border: 2px solid black;
+    transform: scale(1.03)
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+
+#search_div {
+    margin-left: 5%;
+}
+
+#search_div {
+    position: relative;
+}
+
+#search_div input[type="search"] {
+    padding-right: 30px;
+}
+
+#search {
+    width: 280px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+
+    background-size: 16px 16px;
+    padding-left: 30px;
+    background-color: rgb(234, 233, 233);
+    border: 1px solid rgb(236, 221, 221);
+
+}
+
+#search_div .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media only screen and (max-width: 1130px) {
+    header {
+        display: block;
+        padding-top: 25px;
+
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    }
+
+    #main_perks {
+        display: none;
+    }
+
+    #perks {
+        display: flex;
+        width: 280px;
+        /* background-color: red; */
+        padding-left: 7%;
+    }
+
+    #search_div {
+        margin-left: 0%;
+    }
+}
+
+#container {
+    width: 90%;
+    height: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-top: 100px;
+}
+
+#filter_div {
+    width: 22%;
+    height: 100%;
+    background-color: white;
+   
+    margin-top: -10px;
+    position: fixed;
+    /* border: 1px solid red; */
+    /* z-index: -5; */
+    /* width: 400px; */
+    /* margin-top: 50px; */
+}
+
+#product_div {
+    width: 68%;
+    height: 1000px;
+    margin-left: 30%;
+    /* z-index: 2; */
+    /* border: 2px solid rgb(197, 12, 12); */
+}
+
+.filter_head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.filter_head>button {
+    background-color: white;
+    color: rgb(74, 172, 172);
+    border: none;
+    text-shadow: 0.5px 0.5px 0.5px;
+}
+
+#price_input {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    gap: 10px;
+    margin: 7px 0 0 4px;
+}
+
+#price_input input {
+    width: 48%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(234, 233, 233);
+    border: 1px solid rgb(236, 221, 221);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#property-type {
+    width: 100%;
+    height: 38px;
+    margin: 7px 0 0 4px;
+    border-radius: 10px;
+    background-color: rgb(234, 233, 233);
+    border: 1px solid rgb(236, 221, 221);
+
+}
+
+#property-type option:nth-child(1) {
+    font-size: large;
+    font-weight: 600;
+
+}
+
+#property-type option {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.conveniences-type {
+    display: flex;
+    margin-bottom: 5px;
+    padding: 7px;
+    position: relative;
+}
+
+.conveniences-type div {
+    height: 40px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.conveniences-type div:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    transform: scale(1.05)
+}
+
+
+
+.conveniences-type div p {
+    margin: auto;
+    display: flex;
+    gap: 8px;
+}
+
+#left1 {
+    width: 27%;
+}
+.conveniences-type i{
+    color:#989ea9;
+}
+
+#rigth1 {
+    width: 66%;
+}
+
+#left2 {
+    width: 55%;
+    margin-left: 2%;
+}
+
+#rigth2 {
+    width: 45%;
+    position: absolute;
+    left: 57%;
+    right: -6%;
+}
+
+#left3 {
+    width: 30%;
+}
+
+#rigth3 {
+    width: 63%;
+}
+
+#left4 {
+    width: 55%;
+    margin-left: 2%;
+}
+
+#rigth4 {
+    width: 45%;
+    position: absolute;
+    left: 57%;
+    right: -6%;
+}
+
+#left5 {
+    width: 27%;
+}
+
+#rigth5 {
+    width: 66%;
+}
+
+.number-of-guest {
+    display: flex;
+    width: 99%;
+    height: 38px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: 7px 0 0 4px;
+    background-color: rgb(234, 233, 233);
+    border: 1px solid rgb(236, 221, 221);
+    border-radius: 10px;
+}
+
+.number-of-guest button {
+    width: 20%;
+    height: 100%;
+    font-size: 180%;
+    background-color: rgb(234, 233, 233);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.number-of-guest button:hover {
+    transform: scale(1.1);
+}
+
+#apply-button {
+    margin-left: 4px;
+    width: 98%;
+    height: 40px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    border-radius: 13px;
+}
+
+#apply-button:hover {
+    cursor: pointer;
+    background-color: rgb(237, 234, 234);
+    border: 2px solid black;
+    transform: scale(1.03);
+    font-weight: 1100;
+    color: black;
+}
+.card-list{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap : 80px;
+    grid-column-gap : 70px;
+
+    margin-left: 0px;
+    line-height: 30px;
+    margin-top: 30px;
+   
+   
+   
+}
+
+.card{
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    width: 100%;
+    border-radius: 10px;
+    /* text-align: center; */
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.card-item{
+padding: 10px;
+}
+.hotelImg{
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+}
+.detail{
+    padding: 10px 18px ;
+    margin: 20px;
+    background-color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.book{
+    padding: 10px 18px;
+    margin: 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.book:hover{
+   
+    background-color:white;
+    color: black;
+  
+    border: 2px solid black;
+    
+}
+.detail:hover{
+    background-color:black;
+    color: white;
+    
+    border: 2px solid black;
+}
+.divprice{
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 10px;
+}
+.span1{
+    margin-top: 2px;
+}
+
+
+#TV:focus{
+border: 2px solid black;
+}
+
+
+@media all and (min-width:768px) and (max-width:1079px){
+  
+    
+    .card-list{
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap : 80px;
+        grid-column-gap : 70px;
+    
+        margin-left: 70px;
+        line-height: 30px;
+        margin-top: 30px;
+        justify-content: center;
+        /* align-items: center; */
+        /* border:1px solid red;    */
+    }
+    .card{
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+        width: 100%;
+        border-radius: 10px;
+        /* text-align: center; */
+        margin: auto;
+        
+    }
+    .hotelImg{
+        width: 100%;
+        height: 290px;
+        border-radius: 10px;
+    }
+    #filter_div{
+        margin-left: 30px;
+    }
+    #noofcards{
+        width: 100%;
+        margin-left: 40px;
+        /* border:1px solid red */
+        
+    }
+}
+
+
+
+@media all and (min-width:360px) and (max-width:767px){
+  
+    
+    .card-list{
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap : 80px;
+        grid-column-gap : 70px;
+    
+        margin-left: 70px;
+        line-height: 30px;
+        margin-top: 30px;
+        justify-content: center;
+        /* align-items: center; */
+        /* border:1px solid red;    */
+    }
+    .card{
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+        width: 110%;
+        /* border-radius: 10px; */
+        /* text-align: center; */
+        margin: auto;
+        
+    }
+    .hotelImg{
+        width: 100%;
+        /* height: 290px; */
+        border-radius: 10px ;
+    }
+    #filter_div{
+        width: 80%;
+        /* display: none; */
+        margin: auto;
+        position: static;
+        /* padding: 0 20px; */
+        margin-bottom: -270px;
+
+
+    }
+    #container{
+        display: block;
+    }
+    #noofcards{
+        width: 80%;
+        margin-left: 20%;
+        /* text-align: left; */
+        /* border:1px solid red */
+        
+    }
+    #product_div{
+        margin-left: 0;
+    }
+   
+
+}
+
+
+@media only screen and (max-width: 690px) {
+    nav>div>img {
+
+        /* height: 30px; */
+        width:130px;
+    }
+  
+    
+   
+    
+    #search_div input[type="search"] {
+        padding-right: 10px;
+    }
+    
+    #search {
+        width: 100%;
+        height: 45px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    
+        background-size: 16px 16px;
+        padding-left: 10px;
+        background-color: rgb(234, 233, 233);
+        border: 1px solid rgb(236, 221, 221);
+    
+    }
+    
+    #search_div .fa-search {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav>div>button {
+        height: 43px;
+        width: 75px;
+        border-radius: 25px;
+        background-color: black;
+        color: white;
+        font-size: medium;
+        text-decoration: none;
+        font-weight: 700;
+    }
+   
+  }
+=======
 /* nav bar css */
 * {
     margin: 0;
