@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,39 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INR CLUB</title>
+    <title>Hotel List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/hotel.css">
+    <script src="https://kit.fontawesome.com/b6dd136fe0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-
         <nav>
             <div><img src="./img/Logo.jpeg" alt="image error" id="logo"></div>
-            <div id="search_div"> <span class="fa fa-search"></span>
+
+            <div id="search_div"> 
+                <span class="fa fa-search"></span>
                 <input type="search" id="search" placeholder="Search by name or location">
             </div>
 
-          
-
-            <div><button id="join">Login</button></div>
+            <div><button id="join"></button></div>
         </nav>
-
-       
-
     </header>
     <main>
-
-        <h1>Hotel Booking Page</h1>
+        <br><br>
         <div id="container">
             <!-- filtering container -->
             <div id="filter_div">
-
                 <div class="filter_head">
-                    
                     <h3>Filters</h3> <button id="resett">Reset</button>
                 </div> <br>
 
@@ -55,12 +48,11 @@
                 </label>
                 <select id="property-type" name="property-type">
                     <option value="">Property Type</option>
-                    
+                    <option value="penthouse">Penthouse</option>
                     <option value="Resort">Resort</option>
                     <option value="Luxury">Luxury</option>
                     <option value="Hot Tub">Hot Tub</option>
                     <option value="spa">spa</option>
-                   
                     <option value="villa">Villa</option>
                 </select> <br> <br>
 
@@ -85,7 +77,7 @@
                 </div>
                 <div class="conveniences-type">
                     <div id="left3">
-                        <p><i class="fa-solid fa-eye" style="color: #989ea9;"></i>City View</p>
+                        <p><i class="fa-solid fa-eye" style="color: #989ea9;"></i>City</p>
                     </div>
                     <div id="rigth3">
                         <p>
@@ -126,14 +118,15 @@
             <!-- product div -->
             <div id="product_div">
                 <div class="filter_head">
-                    <h3 id="noofcards">16 Results</h3>
-                    
+                    <h3 id="noofcards"></h3>
+                    <button id="filter"><i class="fa-solid fa-filter"></i></button>
                 </div>
 
                 <div id="product_container">
-                   
                     <!-- append the product card here -->
                 </div>
+
+                <div class="pagination"></div>
             </div>
         </div>
 
@@ -142,148 +135,7 @@
         <!-- <h1>footer</h1> -->
     </footer>
 </body>
-<script src="https://kit.fontawesome.com/a4254e5bf9.js" crossorigin="anonymous"></script>
 
 <script src="./script/hotel.js"></script>
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style/hotel.css">
-</head>11
-
-<body>
-    <header>
-
-        <nav>
-            <div><img src="./img/Logo.jpeg" alt="image error" id="logo"></div>
-            <div id="search_div"> <span class="fa fa-search"></span>
-                <input type="search" id="search" placeholder="Search by name or location">
-            </div>
-
-            <div class="about" id="main_perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a>
-            </div>
-
-            <div id="join"></div>
-        </nav>
-
-        <div class="about" id="perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a></div>
-
-    </header>
-    <main>
-
-        <h1>Hotel Booking Page</h1>
-        <div id="container">
-            <!-- filtering container -->
-            <div id="filter_div">
-                <div class="filter_head">
-                    <h3>Filters</h3> <button onclick="resetInputs()">Reset</button>
-                </div> <br>
-
-                <label for="price">
-                    <h5>Price</h5>
-                </label>
-                <div id="price_input">
-                    <input type="number" id="price_from" class="reset-input" placeholder="From">
-                    <input type="number" id="price_to" class="reset-input" placeholder="To">
-                </div> <br>
-
-                <label for="property_type">
-                    <h5>Property Type</h5>
-                </label>
-                <select id="property-type" name="property-type">
-                    <option value="">Property Type</option>
-                    <option value="penthouse">Penthouse</option>
-                    <option value="bungalow">Bungalow</option>
-                    <option value="chalet">Chalet</option>
-                    <option value="castle">Castle</option>
-                    <option value="villa">Villa</option>
-                </select> <br> <br>
-
-                <label for="conveniences">
-                    <h5>Conveniences</h5>
-                </label>
-                <div class="conveniences-type">
-                    <div id="left1">
-                        <p><i class="fa-solid fa-tv" style="color: #989ea9;"></i>Tv</p>
-                    </div>
-                    <div id="rigth1">
-                        <p><i class="fa-brands fa-accessible-icon" style="color: #989ea9;"></i>Disabled Access</p>
-                    </div>
-                </div>
-                <div class="conveniences-type">
-                    <div id="left2">
-                        <p><i class="fa-solid fa-tree" style="color: #989ea9;"></i>In the Woods</p>
-                    </div>
-                    <div id="rigth2">
-                        <p><i class="fa-solid fa-hot-tub-person" style="color: #989ea9;"></i>Hot Tubs</p>
-                    </div>
-                </div>
-                <div class="conveniences-type">
-                    <div id="left3">
-                        <p><i class="fa-solid fa-eye" style="color: #989ea9;"></i>Views</p>
-                    </div>
-                    <div id="rigth3">
-                        <p><i class="fa-solid fa-water" style="color: #989ea9;"></i>Lakes & Rivers</p>
-                    </div>
-                </div>
-                <div class="conveniences-type">
-                    <div id="left4">
-                        <p><i class="fa-solid fa-fire" style="color: #989ea9;"></i>Woodburner</p>
-                    </div>
-                    <div id="rigth4">
-                        <p><i class="fa-solid fa-paw" style="color: #989ea9;"></i>Dog Friendly</p>
-                    </div>
-                </div>
-                <div class="conveniences-type">
-                    <div id="left5">
-                        <p><i class="fa-solid fa-wifi" style="color: #989ea9;"></i>Wi-Fi</p>
-                    </div>
-                    <div id="rigth5">
-                        <p><i class="fa-solid fa-bath" style="color: #989ea9;"></i>Outdoors Baths</p>
-                    </div>
-                </div> <br>
-
-                <label>
-                    <h5>Number of guests</h5>
-                </label>
-                <div class="number-of-guest">
-                    <button id="decrease-guest">-</button>
-                    <h5 id="total-guest">1</h5> <button id="increase-guest">+</button>
-                </div> <br>
-
-                <button id="apply-button">Apply</button>
-            </div>
-
-
-            <!-- product div -->
-            <div id="product_div">
-                <div class="filter_head">
-                    <h3>16 Results</h3>
-                    <select name="" id="">
-                        <option value="newest">Newest</option>
-                    </select>
-                </div>
-
-                <div id="product_container">
-                    <!-- append the product card here -->
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <footer>
-        <!-- <h1>footer</h1> -->
-    </footer>
-</body>
-<script src="./script/hotel.js"></script>
 </html>
