@@ -40,9 +40,10 @@ let rigth1=document.getElementById("rigth1")
 let rigth2=document.getElementById("rigth2")
 let rigth3=document.getElementById("rigth3")
 let rigth4=document.getElementById("rigth4")
+let rigth5=document.getElementById("rigth5")
 
 
-
+let hotelData=[]
 
 
 // fetchData function
@@ -50,10 +51,10 @@ async function fetchdata() {
     try {
         let res = await fetch("https://mock-api-hotels.onrender.com/hotels")
         let data = await res.json();
-        console.log(data)
+        // console.log(data)
         display(data);
         let search = document.getElementById("search")
-
+hotelData=data;
         // search addEventListener
         search.addEventListener("input", () => {
             searchdata(data);
@@ -113,6 +114,10 @@ async function fetchdata() {
         rigth4.addEventListener("click",()=>{
             rigth4data(data);
             rigth4.style.border="1px solid black"
+        })
+        rigth5.addEventListener("click",()=>{
+            rigth5data(data);
+            rigth5.style.border="1px solid black"
         })
 
 
@@ -281,6 +286,7 @@ function resetInputs(data) {
         rigth2.style.border="none"
         rigth3.style.border="none"
         rigth4.style.border="none"
+        rigth5.style.border="none"
         left3.style.border="none"
         left4.style.border="none"
         left5.style.border="none"
@@ -355,6 +361,16 @@ function rigth4data(data){
     });
     display(filtered);
 }
+function rigth5data(data){
+    let filtered = data.filter(function (el) {
+        if (el.conveniences && el.conveniences.includes("Disabled")) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+}
 
 
 function left3data(data){
@@ -388,3 +404,4 @@ function left5data(data){
     display(filtered);
 }
 
+// console.log(hotelData);
