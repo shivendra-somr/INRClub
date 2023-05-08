@@ -38,15 +38,18 @@ nav>div>img {
     height: 60px
 }
 
-nav>div>button {
+#join {
     height: 43px;
     width: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 25px;
-    background-color: black;
+    background-color: rgb(16, 16, 16);
     color: white;
     font-size: medium;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 nav>div>button:hover {

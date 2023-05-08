@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Inter, sans-serif;
+        }
+        nav{
+            width: 65%;
+        /* background-color: red; */
+        }
+        header{
+            /* background-color: yellow; */
+            width: 100%;
+            position: relative;
+        }
+        :root{
+            --table-color:rgb(19,30,33)
+        }
+        main{
+            width: 80%;
+            margin: auto;
+            /* background-color: greenyellow; */
+        }
+       
+        main h1 {
+            text-align: center;
+        }
+        table{
+            margin: auto;
+            width: 80%;
+        }
+        thead{
+            height: 40px;
+            background-color: var(--table-color) ;
+            color: white;
+        }
+        th{
+            border: 2px solid black;
+        }
+        tbody{
+            height: 35px;
+            text-align: center;
+        }
+        tbody td{
+            background-color:rgb(89, 100, 103);
+            font-weight: 550;
+            color: white;
+        }
+        td button{
+            width: 70px;
+            height: 27px;
+            border-radius: 8px;
+            color:var(--table-color);
+            border: 3px solid var(--table-color);
+            font-weight: 700;
+        }
+        td button:hover{
+            background-color: var(--table-color);
+            color: white;
+            font-weight: 700;
+        }
+        #status{
+            font-weight: 600;
+        }
+        @media only screen and (max-width:1000px){
+            #main_perks{
+                display: none;
+            }
+            nav{
+                width: 90%;
+            }
+            #dash{
+                font-size: small;
+            }
+        }
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><img src="./img/Logo.jpeg" alt="image error" id="logo"></div>
+            <div id="search_div"><input type="search" id="search" placeholder="Search by Customer name"> </div>
+            <!-- <div class="about" id="main_perks"><a href="#">About us</a> <a href="#">The Perks</a> <a href="#">FAQs</a>
+            </div> -->
+            
+            <div><button id="admin">Admin Page</button></div>
+        </nav>
+    </header>
+    <main>
+        <div id="dash" style="background-color: rgb(5,5,5);width: 80%;margin: auto;border: 2px solid rgb(25, 24, 29);color: white;"><h1>Dashboard for Customer Booking Datails</h1></div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Id Proof</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Room Type</th>
+                    <th>No. of Guest</th>
+                    <th>Bill Amount</th>
+                    <th>Status</th>
+                    <th>Cancle Booking</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <!-- append booking details here -->
+            </tbody>
+        </table>
+    </main>
+</body>
+<script>
+            let customerDetails= []
+                async function fetchData(){
+                    try {
+                        let res = await fetch("https://mock-api-hotels.onrender.com/booking")
+                            res= await res.json();
+                            data= res
+                            // console.log(data);
+                           customerDetails=data
+                            DisplayData(data)                       
+                          
+                    } catch (error) {
+                        console.log(error)
+                    }
+                }
+                fetchData()
+                console.log(customerDetails)
+                let tbody = document.querySelector("tbody")
+                function DisplayData(arr){
+                    tbody.innerHTML=null;
+                    arr.map((el,index)=>{
+                        let tr= document.createElement("tr");
+                        let td1= document.createElement("td");
+                        let td2= document.createElement("td");
+                        let td3= document.createElement("td");
+                        let td4= document.createElement("td");
+                        let td5= document.createElement("td");
+                        let td6= document.createElement("td");
+                        let td7= document.createElement("td");
+                        let td8= document.createElement("td");
+                        let td9= document.createElement("td");
+                        let td10= document.createElement("td");
+
+                        td9.id="bookingStatus"
+
+                        td1.innerText= el.name;
+                        td2.innerText= el.contact;
+                        td3.innerText= el.Proof;
+                        td4.innerText= el.CheckIn;
+                        td5.innerText= el.CheckOut;
+                        td6.innerText= el.room;
+                        td7.innerText= el.guest;
+                        td8.innerText= el.bill;
+                        td9.innerText= el.status;
+                        td9.id="status"
+
+                        let cancleBtn= document.createElement("button")
+                        cancleBtn.id="booking-cancle-button"
+                        cancleBtn.innerText="Cancle"
+                        td10.appendChild(cancleBtn) 
+
+                        cancleBtn.addEventListener("click",function(){
+                            deleteBooking(el.id)
+                            console.log("cancle")
+                        })
+                         
+                        tr.append(td1,td2,td3,td4,td5,td6,td7,td8,td9,td10)
+                        tbody.append(tr)
+                    })
+                }
+                        function deleteBooking(id){
+                            fetch(`https://mock-api-hotels.onrender.com/booking/${id}`,{
+                                method:"DELETE",
+                                headers:{
+                                "Content-type":"application/json"
+                                }
+                            })
+                            .then(res=> res.json())
+                            .then(data=> {
+                                fetchData();
+                                console.log(data)
+                            })
+                            .catch((err) => {
+                                console.log(err)
+                            })
+                        }
+
+                        // redirecting links
+            let admin= document.querySelector("#admin")
+            admin.addEventListener("click",()=>{
+                window.location.href="hotelAdmin.html"
+            })
+
+            let home= document.querySelector("#logo")
+            home.addEventListener("click",()=>{
+                window.location.href="index.html"
+            })                  
+
+            let search= document.getElementById("search")
+
+            let booksData = [];
+
+                // search functionality
+            search.addEventListener("input",()=>{
+                let filterData=customerDetails.filter((el)=>{
+                    if(el.name.toLowerCase().includes(search.value.toLowerCase())== true){
+                        return true
+                    }
+                    else{
+                        return false
+                    }
+                })
+                DisplayData(filterData)
+            })
+
+
+        </script>
+</html>

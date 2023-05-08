@@ -11,7 +11,10 @@ function resetInputs() {
 
 }
 
-let joinBtn = document.getElementById('join');
+let joinBtn = document.getElementById('join'); 
+let user= JSON.parse(localStorage.getItem("username"))
+console.log(user)
+joinBtn.append(user)
 
 
 
