@@ -10,8 +10,13 @@ function resetInputs() {
     let inputs = document.getElementsByClassName("reset-input")
 
 }
+    //   to display user in the button
+    let joinBtn = document.getElementById('join'); 
+    let user= JSON.parse(localStorage.getItem("username"))
+    console.log(user)
+    joinBtn.append(user)
 
-let joinBtn = document.getElementById('join');
+
 
 
 

@@ -54,6 +54,7 @@ loginFormBtn.addEventListener('click', (e)=>{
       for(let i=0; i<data.length;i++){
         if(( data[i].email==loginUsername.value  && data[i].password == loginPassword.value)){
           console.log(data)
+          localStorage.setItem("username",JSON.stringify(data[i].name))
           alert(`Welcome Back ${data[i].name}`)
           window.location.href = "./hotel.html";
           userFound = true;
@@ -70,6 +71,8 @@ loginFormBtn.addEventListener('click', (e)=>{
   
 })
 
+    // signUp functionality
+
 let signUpForm = document.querySelector('form.signup');
 let signUpFormBtn = signUpForm.querySelector("input[type='submit']");
 let signUpName = signUpForm.querySelector("input[type='text']");
@@ -80,7 +83,10 @@ let signUpConfirmPassword = document.getElementById("confirm-password")
 signUpFormBtn.addEventListener("click",(e)=>{
   e.preventDefault();
   console.log("hai")
-  if(signUpPassword.value !== signUpConfirmPassword.value){
+  if(signUpName.value=="" || signUpEmail.value=="" || signUpPassword.value=="" || signUpConfirmPassword.value==""){
+      alert("Please fill all required details")
+  }
+  else if(signUpPassword.value !== signUpConfirmPassword.value){
     alert("Passwords do not match");
   }
   else{
@@ -99,9 +105,8 @@ signUpFormBtn.addEventListener("click",(e)=>{
     .then(res => res.json())
     .then(data => {
       alert("Signup successful!");
+      signUpForm.reset();
     })
     .catch(error => console.error(error));
   }
-
-  signUpForm.reset();
 });
