@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
     <title>Payment</title>
     <link rel="stylesheet" href="./style/payment.css">
 </head>
@@ -13,10 +14,10 @@
     <div class="container">
         <form>
             <div class="row">
-                <div class="col">
+                <!-- <div class="col"> -->
 
                     <!-- Billing Address -->
-                    <h3 class="title">billing address</h3>
+                    <!-- <h3 class="title">billing address</h3>
 
                     <div class="inputBox">
                         <span>Full Name :</span>
@@ -44,8 +45,8 @@
                             <span>ZIP :</span>
                             <input type="text" placeholder="251306" id="pincode">
                         </div>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
 
                 <!-- Payment Details -->
                 <div class="col">
@@ -54,11 +55,11 @@
                         <h3 class="title">Payment</h3>
 
                         <div class="inputBox">
-                            <span>How would you like to pay?</span>
-                            <img src="C:\Users\nehas\OneDrive\Desktop\Practice\img\card.jpeg" alt="">
+                            <span>Cards Accepted:</span>
+                            <img src="./img/WhatsApp Image 2023-05-06 at 08.13.05.jpg" alt="">
                         </div>
                         <div class="inputBox">
-                            <span>Name On Card :</span>
+                            <span>Card Holder Name :</span>
                             <input type="text" placeholder="Card Name" id="cardName">
                         </div>
                         <div class="inputBox">
@@ -81,9 +82,9 @@
                             </div>
                         </div>
                     </div>
+                    <input type="submit" onclick="setTimeout(openPopup, 3000)" value="Checkout" class="submit-btn">
                 </div>
 
-                <input type="submit" onclick="setTimeout(openPopup, 3000)" value="Checkout" class="submit-btn">
 
         </form>
     </div>

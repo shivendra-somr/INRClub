@@ -1,0 +1,161 @@
+/* Page CSS */
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #050505;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+}
+
+.container form {
+    padding: 20px;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col {
+    flex: 1 1 250px;
+}
+
+.col{
+    margin: auto;
+}
+
+.container form .row .col .title {
+    font-size: 30px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container form .row .col .inputBox {
+    margin: 15px 0;
+   
+}
+
+.container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #100f0f;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container form .row .col .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.container form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn {
+    width: 50%;
+    padding: 12px;
+    font-size: 17px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s;
+    margin: auto;
+    display: block;
+}
+
+.container form .submit-btn:active {
+    transform: scale(0.98);
+} 
+
+/* Card CSS */
+.popup {
+    width: 400px;
+    background: #fafafa;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open_popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    /* width: 100%; */
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
