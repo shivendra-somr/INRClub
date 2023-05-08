@@ -1,0 +1,116 @@
+body {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+#container {
+  width: 80%;
+  /* height: 1200px; */
+  margin: auto;
+  display: flex;
+  gap: 30px;
+}
+
+#update_div {
+  width: 30%;
+  position: sticky;
+  top: 120px;
+  margin: auto;
+  text-align: center;
+}
+
+#product_div {
+  width: 68%;
+  height: 1000px;
+}
+
+.u-full-width {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  background-color: rgb(234, 233, 233);
+  border: 1px solid rgb(236, 221, 221);
+  border-radius: 5px;
+}
+
+#update_div button {
+  display: block;
+  width: 50%;
+  font-weight: 700;
+  color: white;
+  /* background-color: rgb(9, 74, 118); */
+  background-color: #242424;
+  border-radius: 13px;
+  height: 40px;
+  margin-left: 25%;
+}
+
+#update_div button:hover {
+  cursor: pointer;
+  background-color: rgb(131, 180, 226);
+  border: 2px solid black;
+  transform: scale(1.03);
+  font-weight: 1100;
+  color: black;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-left: 10px;
+}
+
+.card-img img {
+  width: 100%;
+  min-width: 349px;
+  max-width: 350px;
+  min-height: 200px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.card-link {
+  margin-right: 70px;
+  /* background-color: rgb(15, 56, 223); */
+  background-color: #242424;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: antiquewhite;
+}
+
+.card-button {
+  margin-right: 70px;
+  background-color: #242424;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: antiquewhite;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+#main_perks a {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  margin-left: 25px;
+}
+
+#search {
+  width: 200px;
+}
+
+#product_container>div p {
+  font-size: .89rem;
+}
+
+/* #product_container > div:nth-child(1) button{
+     margin-top: 10px;
+  } */

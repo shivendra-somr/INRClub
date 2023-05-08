@@ -16,33 +16,33 @@
                 <div class="col">
 
                     <!-- Billing Address -->
-                    <h3 class="title">billing address</h3>
+                    <h3 class="title">Costumer Details</h3>
 
                     <div class="inputBox">
                         <span>Full Name :</span>
-                        <input type="text" placeholder="Name" id="name">
+                        <input type="text" placeholder="Name" id="name" required>
                     </div>
                     <div class="inputBox">
                         <span>Email Address :</span>
-                        <input type="email" placeholder="example@example.com" id="email">
+                        <input type="email" placeholder="example@example.com" id="email" required>
                     </div>
                     <div class="inputBox">
                         <span>Address :</span>
-                        <input type="text" placeholder="Address" id="address">
+                        <input type="text" placeholder="Address" id="address" required>
                     </div>
                     <div class="inputBox">
                         <span>City :</span>
-                        <input type="text" placeholder="City" id="city">
+                        <input type="text" placeholder="City" id="city" required>
                     </div>
 
                     <div class="flex">
                         <div class="inputBox">
                             <span>State :</span>
-                            <input type="text" placeholder="State" id="state">
+                            <input type="text" placeholder="State" id="state" required>
                         </div>
                         <div class="inputBox">
                             <span>ZIP :</span>
-                            <input type="text" placeholder="251306" id="pincode">
+                            <input type="text" placeholder="251306" id="pincode" required>
                         </div>
                     </div>
                 </div>
@@ -55,29 +55,29 @@
 
                         <div class="inputBox">
                             <span>How would you like to pay?</span>
-                            <img src="C:\Users\nehas\OneDrive\Desktop\Practice\img\card.jpeg" alt="">
+                            <img src="./img/payment.jpg" alt="">
                         </div>
                         <div class="inputBox">
                             <span>Name On Card :</span>
-                            <input type="text" placeholder="Card Name" id="cardName">
+                            <input type="text" placeholder="Card Name" id="cardName" required>
                         </div>
                         <div class="inputBox">
                             <span>Card Number :</span>
-                            <input type="number" placeholder="1111-2222-3333-4444" id="cardNumber">
+                            <input type="number" placeholder="1111-2222-3333-4444" id="cardNumber" required>
                         </div>
                         <div class="inputBox">
                             <span>Expiration Month :</span>
-                            <input type="text" placeholder="Month" id="expMonth">
+                            <input type="text" placeholder="Month" id="expMonth" required>
                         </div>
 
                         <div class="flex">
                             <div class="inputBox">
                                 <span>Expiration Year :</span>
-                                <input type="number" placeholder="Year" id="expYear">
+                                <input type="number" placeholder="Year" id="expYear" required>
                             </div>
                             <div class="inputBox">
                                 <span>CVV :</span>
-                                <input type="text" placeholder="123" id="cvv">
+                                <input type="text" placeholder="123" id="cvv" required>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                     src="https://www.clipartkey.com/mpngs/m/153-1530386_success-png-image-png-download-transparent-background-green.png">
                 <h2>Payment Successful !</h2>
                 <p>Thanks For Visiting Here</p>
-                <button type="button" onclick="closePopup()"><a href="PaymentDetails.html">View Details</a></button>
+                <button type="button" onclick="closePopup()"><a href="index.html">Go to Homepage</a></button>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
     const myForm = document.querySelector("form");
 
     // Catching Billing Adddress
-    const name = document.getElementById("name");
+    const billername = document.getElementById("name");
     const email = document.getElementById("email");
     const address = document.getElementById("address");
     const city = document.getElementById("city");
@@ -123,16 +123,16 @@
     let DATA = JSON.parse(localStorage.getItem("payment")) || {};
 
     myForm.addEventListener("submit", (e) => {
+
         e.preventDefault();
+
         DATA = {
-            // Billing Address
-            Name: name.value,
+            Name: billername.value,
             Email: email.value,
             Address: address.value,
             City: city.value,
             State: state.value,
             Pincode: pincode.value,
-            // Card Details
             CardName: cardName.value,
             CardNumber: "************1234",
             ExpMonth: expMonth.value,
@@ -141,6 +141,7 @@
         };
 
         localStorage.setItem("payment", JSON.stringify(DATA));
+
     });
 
     // Popup Card
@@ -148,9 +149,11 @@
     function openPopup() {
         popup.classList.add("open_popup");
     }
+
     function closePopup() {
         popup.classList.remove("open_popup");
     }
+
 </script>
 
 </html>

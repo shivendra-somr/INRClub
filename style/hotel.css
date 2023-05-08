@@ -12,69 +12,50 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
     font-size: 16px;
-    /* background-color: red; */
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-   
 }
 
 nav {
     width: 80%;
     height: 60%;
     margin: auto;
-    /* background-color: white; */
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+
 }
 
 nav>div>img {
-
     height: 60px
 }
 
-#join {
+nav>div>button {
     height: 43px;
     width: 135px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 25px;
-    background-color: rgb(16, 16, 16);
+    background-color: black;
     color: white;
     font-size: medium;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 nav>div>button:hover {
     cursor: pointer;
     background-color: rgb(36, 34, 34);
     border: 2px solid black;
-    transform: scale(1.03)
+    transform: scale(1.03);
 }
 
 a {
     color: black;
     text-decoration: none;
-
-}
-
-.about {
-    background-color: white;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    width: 240px;
-}
-
-#perks {
-    display: none;
 }
 
 #search_div {
@@ -96,12 +77,10 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
-
     background-size: 16px 16px;
     padding-left: 30px;
     background-color: rgb(234, 233, 233);
     border: 1px solid rgb(236, 221, 221);
-
 }
 
 #search_div .fa-search {
@@ -120,45 +99,33 @@ a {
 
     }
 
-    #main_perks {
-        display: none;
-    }
-
-    #perks {
-        display: flex;
-        width: 280px;
-        /* background-color: red; */
-        padding-left: 7%;
-    }
-
     #search_div {
         margin-left: 0%;
     }
 }
 
 #container {
-    width: 90%;
-    height: 1000px;
+    width: 80%;
     margin: auto;
     display: flex;
-    gap: 30px;
-    position: relative;
+    gap: 20px;
     /* border: 1px solid black; */
 }
 
 #filter_div {
     width: 30%;
-    height: 700px;
-    position: fixed;
-    /* width: 400px; */
+    display: none;
 }
 
-#product_div {
-    width: 68%;
-    height: 1000px;
-    margin-left: 35%;
-    /* border: 2px solid rgb(197, 12, 12); */
+#filter {
+    position: relative;
 }
+
+#filter i {
+    font-size: 40px;
+    color: black;
+}
+
 
 .filter_head {
     display: flex;
@@ -174,7 +141,7 @@ a {
 
 #price_input {
     width: 100%;
-    height: 38px;
+    height: 30px;
     display: flex;
     gap: 10px;
     margin: 7px 0 0 4px;
@@ -196,7 +163,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 #property-type {
     width: 100%;
-    height: 38px;
+    height: 30px;
     margin: 7px 0 0 4px;
     border-radius: 10px;
     background-color: rgb(234, 233, 233);
@@ -206,8 +173,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 #property-type option:nth-child(1) {
     font-size: large;
-    font-weight: 600;
-
 }
 
 #property-type option {
@@ -217,13 +182,13 @@ input[type=number]::-webkit-inner-spin-button {
 
 .conveniences-type {
     display: flex;
-    margin-bottom: 5px;
-    padding: 7px;
+    /* margin-bottom: 5px; */
+    padding: 10px;
     position: relative;
 }
 
 .conveniences-type div {
-    height: 40px;
+    /* height: 40px; */
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -249,15 +214,18 @@ input[type=number]::-webkit-inner-spin-button {
 
 #left1 {
     width: 27%;
+    height: 25px;
 }
 
 #rigth1 {
     width: 66%;
+    height: 25px;
 }
 
 #left2 {
     width: 55%;
     margin-left: 2%;
+    height: 25px;
 }
 
 #rigth2 {
@@ -265,19 +233,24 @@ input[type=number]::-webkit-inner-spin-button {
     position: absolute;
     left: 57%;
     right: -6%;
+    height: 25px;
+
 }
 
 #left3 {
     width: 30%;
+    height: 25px;
 }
 
 #rigth3 {
     width: 63%;
+    height: 25px;
 }
 
 #left4 {
     width: 55%;
     margin-left: 2%;
+    height: 25px;
 }
 
 #rigth4 {
@@ -285,20 +258,23 @@ input[type=number]::-webkit-inner-spin-button {
     position: absolute;
     left: 57%;
     right: -6%;
+    height: 25px;
 }
 
 #left5 {
     width: 27%;
+    height: 25px;
 }
 
 #rigth5 {
     width: 66%;
+    height: 25px;
 }
 
 .number-of-guest {
     display: flex;
     width: 99%;
-    height: 38px;
+    /* height: 38px; */
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -311,7 +287,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .number-of-guest button {
     width: 20%;
-    height: 100%;
     font-size: 180%;
     background-color: rgb(234, 233, 233);
     border: none;
@@ -341,54 +316,93 @@ input[type=number]::-webkit-inner-spin-button {
     font-weight: 1100;
     color: black;
 }
-.card-list{
+
+#filter {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#product_div {
+    width: 100%;
+}
+
+.card-list {
     display: grid;
     width: 100%;
     margin: auto;
-    grid-template-columns: repeat(2,1fr);
-    grid-row-gap : 80px;
-    grid-column-gap : 30px;
-
-    margin-left: 30px;
-    line-height: 30px;
-    margin-top: 30px;
-   
-   
-   
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    /* border: 1px solid green; */
+    grid-column-gap: 30px;
 }
 
-.card{
+.card {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 400px;
+    width: 90%;
+    margin: auto;
     border-radius: 10px;
     text-align: center;
-    
 }
-.card-item{
-padding: 10px;
+
+.card-item {
+    padding: 10px;
 }
-.hotelImg{
-    width: 400px;
+
+.hotelImg {
+    width: 100%;
     height: 270px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0px 0px;
 }
-.detail{
-    padding: 10px 18px ;
-    margin: 20px;
-    background-color: white;
-    font-weight: 700;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+
+.pagination {
+    text-align: center;
 }
-.book{
-    padding: 10px 18px;
+
+.pagination a {
+    font-size: 30px;
     margin: 20px;
-    background-color:black;
-    color: white;
-    border: none;
-    font-weight: 700;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+}
+
+.pagination a:hover {
+    transform: scale(1.2);
+    color: aqua;
+}
+
+
+@media only screen and (max-width: 767px) {
+    header {
+        width: 100%;
+        height: 150px;
+
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav>div>img {
+        height: 30px
+    }
+
+    #search {
+        width: 200px;
+        height: 25px;
+        font-size: 10px;
+
+    }
+
+    nav>div>button {
+        height: 30px;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #filter_div {
+        width: 100%;
+        display: none;
+    }
+
 }
