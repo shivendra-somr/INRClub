@@ -8,28 +8,6 @@ userBtn.addEventListener('click',()=>{
   window.location = "./admin2.html";
 })
 
-// ADD Hotels
-
-let hotelTitleInput = document.getElementById("hotel-name");
-let hotelImageInput = document.getElementById("hotel-image");
-let hotelLocationInput = document.getElementById("hotel-location");
-let hotelDescriptionInput = document.getElementById("hotel-desc");
-let hotelPriceInput = document.getElementById("hotel-price");
-let hotelCreateBtn = document.getElementById("add-hotel");
-
-// Update Hotels
-
-let updateHotelIdInput = document.getElementById("update-hotel-id");
-let updateHotelTitleInput = document.getElementById("update-hotel-name");
-let updateHotelImageInput = document.getElementById("update-hotel-image");
-let updateHotelLocationInput = document.getElementById(
-  "update-hotel-location"
-);
-let updateHotelDescriptionInput =
-  document.getElementById("update-hotel-desc");
-let updateHotelPriceInput = document.getElementById("update-hotel-price");
-let updateHotelBtn = document.getElementById("update-hotel");
-
 // sorting
 
 let sortAtoZBtn = document.getElementById("sort-price-low-to-high");
@@ -38,14 +16,6 @@ let sortZtoABtn = document.getElementById("sort-price-high-to-low");
 let sortRatingAtoZBtn = document.getElementById("sort-rating-low-to-high");
 let sortRatingztoABtn = document.getElementById("sort-rating-high-to-low");
 
-//Update price
-
-let updatePriceHotelId = document.getElementById("update-score-hotel-id");
-let updatePriceHotelPrice = document.getElementById(
-  "update-score-hotel-price"
-);
-let updatePriceHotelPriceButton =
-  document.getElementById("update-score-hotel");
 
 let mainSection = document.getElementById("product_container");
 
@@ -162,10 +132,21 @@ function cretecard(item) {
   return card;
 }
 
+// Update Hotels
+
+let updateHotelIdInput = document.getElementById("update-hotel-id");
+let updateHotelTitleInput = document.getElementById("update-hotel-name");
+let updateHotelImageInput = document.getElementById("update-hotel-image");
+let updateHotelLocationInput = document.getElementById("update-hotel-location");
+let updateHotelDescriptionInput = document.getElementById("update-hotel-desc");
+let updateHotelPriceInput = document.getElementById("update-hotel-price");
+let updateHotelReviewInput = document.getElementById("update-hotel-review");
+let updateHotelBtn = document.getElementById("update-hotel");
+
 // Edit function here
 
-updateHotelBtn.addEventListener("click", function (id) {
-  fetch(`https://mock-api-hotels.onrender.com/hotels/${id}`, {
+updateHotelBtn.addEventListener("click", function () {
+  fetch(`https://mock-api-hotels.onrender.com/hotels/${updateHotelIdInput.value}`, {
     method: "PUT",
     body: JSON.stringify({
       name: updateHotelTitleInput.value,
@@ -173,6 +154,7 @@ updateHotelBtn.addEventListener("click", function (id) {
       description: updateHotelDescriptionInput.value,
       image: updateHotelImageInput.value,
       price: updateHotelPriceInput.value,
+      review: updateHotelReviewInput.value
     }),
     headers: {
       "Content-Type": "application/json",
@@ -192,7 +174,18 @@ updateHotelBtn.addEventListener("click", function (id) {
 
 // Adding the new hotel
 
+
+// ADD Hotels
+
+let hotelTitleInput = document.getElementById("hotel-name");
+let hotelImageInput = document.getElementById("hotel-image");
+let hotelLocationInput = document.getElementById("hotel-location");
+let hotelDescriptionInput = document.getElementById("hotel-desc");
+let hotelPriceInput = document.getElementById("hotel-price");
+let hotelCreateBtn = document.getElementById("add-hotel");
+
 hotelCreateBtn.addEventListener("click", AddHotel);
+
 function AddHotel() {
   fetch(`https://mock-api-hotels.onrender.com/hotels`, {
     method: "POST",
@@ -219,6 +212,33 @@ function AddHotel() {
     });
 }
 
+//Update price
+
+let updatePriceHotelId = document.getElementById("update-score-hotel-id");
+let updatePriceHotelPrice = document.getElementById("update-score-hotel-price");
+let updatePriceHotelPriceButton = document.getElementById("update-score-hotel");
+
+updatePriceHotelPriceButton.addEventListener('click', ()=>{
+  fetch(`https://mock-api-hotels.onrender.com/hotels/${updatePriceHotelId.value}`, {
+    method: "PATCH",
+    body: JSON.stringify({
+      price: updatePriceHotelPrice.value,
+    }),
+    headers: {
+      "Content-type": "application/json",
+    },
+  })
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      location.reload();
+      appendData(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+})
 // sorting Part
 
 sortAtoZBtn.addEventListener("click", sort1);
@@ -294,14 +314,12 @@ search.addEventListener("input", function () {
 
   let searchValue = search.value.trim().toLowerCase();
 
-  let results = document.querySelector("#product_container");
-
   if (searchValue == "") {
     appendData(hotelData);
     count.style.display = "none";
   } else {
     let temp = hotelData.filter(function (el) {
-      return el.location.trim().toLowerCase().includes(searchValue);
+      return el.location.trim().toLowerCase().includes(searchValue)||el.name.trim().toLowerCase().includes(searchValue);
     });
     count.style.display = "block";
     count.innerText = `${temp.length} Destinations Found`;
